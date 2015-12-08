@@ -29,29 +29,19 @@ class CV(Environment):
         super().__init__(*args, **kwargs)
         self.arguments = UnsafeCommand('spacedallcaps', self.arguments)
 
-doc.append(UnsafeCommand('newcommand', r'\MarginText', options=1,
-                 extra_arguments=r'\marginpar{\raggedleft\small#1}')
-           )
+doc.append(UnsafeCommand('newcommand', r'\MarginText', options=1, extra_arguments=r'\marginpar{\raggedleft\small#1}'))
 
 doc.append(UnsafeCommand('newlength', r'\datebox', ))
 doc.append(UnsafeCommand('settowidth', r'\datebox', extra_arguments='Tuebingen, Germany'))
 
-
 doc.append(UnsafeCommand('newcommand', r'\NewEntry', options=2,
-              extra_arguments=r'\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 \vspace{0.5em}\\')
-           )
+        extra_arguments=r'\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 \vspace{0.5em}\\'))
 
-##
-doc.append(UnsafeCommand('hypersetup',
-                         extra_arguments=r'colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon')
-           )
-
-doc.append(UnsafeCommand('renewcommand', r'\cvheadingfont', extra_arguments=r'\LARGE\color{Maroon}')
-           )
+doc.append(UnsafeCommand('hypersetup', extra_arguments=r'colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon'))
+doc.append(UnsafeCommand('renewcommand', r'\cvheadingfont', extra_arguments=r'\LARGE\color{Maroon}'))
 
 doc.append(UnsafeCommand('newcommand', r'\Description', options=1,
-                         extra_arguments=r'\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}')
-           )
+                         extra_arguments=r'\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}'))
 
 doc.append(UnsafeCommand('newcommand', r'\SubHeading', options=1,
                          extra_arguments=r'\vspace{.5em}\noindent\spacedlowsmallcaps{#1}\vspace{0.7em}\\'))
