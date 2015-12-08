@@ -46,7 +46,7 @@ doc.append(UnsafeCommand('renewcommand', r'\cvheadingfont', extra_arguments=r'\L
 class Description(CommandBase):
     _latex_name = 'Description'
 doc.append(UnsafeCommand('newcommand', r'\Description', options=1,
-                         extra_arguments=r'\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}\\')
+                         extra_arguments=r'\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}')
            )
 
 ##
@@ -60,9 +60,13 @@ doc.preamble.append(Command('title', 'Research Experiences'))
 doc.preamble.append(Command('author', 'Nicholas A. Del Grosso'))
 doc.preamble.append(Command('date', NoEscape(r'\today')))
 
-
+# Fill Document
 doc.append(SubHeading('Research Experiences'))
 doc.append(NewEntry(['Universitat Tuebingen', 'Prof. Dr. Niels Birbaumer']))
+doc.append(MarginText('May 2013'))
+doc.append(Description('This is a description of what I did during this time.  It is the longest part of the entry, and can take up several lines.  Hopefully, it will look really good.'))
+
 doc.append(NewEntry(['Universitat Tuebingen', 'Prof. Dr. Niels Birbaumer']))
+
 doc.generate_pdf()
 doc.generate_tex()
