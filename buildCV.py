@@ -17,12 +17,11 @@ doc.packages.append(Package('classicthesis', ['nochapters']))
 doc.packages.append(Package('currvita', ['LabelsAligned']))
 doc.packages.append(Package('hyperref'))
 #
-# Make New Commands
-def latex2pyclasses(class_names):
-    for name in class_names:
-        globals()[name] = type(name, (CommandBase,), {'_latex_name': name})
+# Make New Commands via a metaclass
+for name in ['MarginText', 'NewEntry', 'Description', 'SubHeading', 'vspace', 'hspace', 'includegraphics']:
+    globals()[name] = type(name, (CommandBase,), {'_latex_name': name})
 
-latex2pyclasses(['MarginText', 'NewEntry', 'Description', 'SubHeading', 'vspace', 'hspace', 'includegraphics'])
+# Custom CV Environment behavior
 class CV(Environment):
     _latex_name = 'cv'
     def __init__(self, *args, **kwargs):
