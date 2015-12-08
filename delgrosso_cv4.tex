@@ -1,0 +1,88 @@
+% cv example for classicthesis.sty
+
+\documentclass{article}
+
+%\hyphenpenalty=10000
+
+\usepackage[]{marginnote}
+\reversemarginpar % Move the margin to the left of the page
+
+\usepackage{graphicx}
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+
+% Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\small#1}} % New command defining the margin text style
+
+
+\newlength{\datebox}\settowidth{\datebox}{Tuebingen, Germany} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{.5em} #2 #3
+\vspace{0.5em}} % Add some white space after each new entry
+
+
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+\newcommand{\SubHeading}[1]{\vspace{.5em}\noindent\spacedlowsmallcaps{#1}\vspace{0.7em}}
+
+
+\begin{document}
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+\begin{cv}{\spacedallcaps{Nicholas A. Del Grosso}}
+
+
+%\marginnote{
+%		\includegraphics[width=2.5cm, trim={2cm 0 2cm 0},clip]{images/photo.jpg}
+%}
+
+\vspace{2em}
+
+\SubHeading{Personal Information} \\
+\input{sections/personal_info}
+
+	
+\SubHeading{Goals} 
+\input{sections/goals_research}
+
+% Education	
+\SubHeading{Education} \\
+
+\NewEntry{\textbf{M.Sc. Neuroscience}}{\MarginText{Aug. 2012}Max Planck International Research School: Graduate School of Neural and Behavioural Sciences in T\"{u}bingen, Germany}
+
+\NewEntry{\textbf{B.Sc. Psychology}}{\MarginText{May 2010} Wittenberg University in Springfield, Ohio}
+
+
+\SubHeading{Research Experience}\\
+\input{sections/research_experience_recent}
+\input{sections/research_experience_older}
+
+\SubHeading{Industry Experience}\\
+\input{sections/industry_experience}
+
+\SubHeading{Publications}\\
+\input{sections/publications_journal}
+
+\SubHeading{Conference Papers} \\
+\input{sections/publications_conference}
+
+\SubHeading{Skills} \\
+\input{sections/skills}
+
+\SubHeading{Awards} \\
+\input{sections/additional_info}
+
+\vspace{2em}
+\includegraphics[width=5cm]{images/Signature_transparant.png}
+
+\end{cv}
+\end{document}

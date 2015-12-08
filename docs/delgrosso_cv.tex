@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{marginnote}
+\usepackage{graphicx}
+\usepackage[nochapters]{classicthesis}
+\usepackage[LabelsAligned]{currvita}
+\usepackage{hyperref}
+\title{Research Experiences}
+\author{Nicholas A. Del Grosso}
+\date{\today}
+
+\begin{document}
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\small#1}}
+\newlength{\datebox}
+\settowidth{\datebox}{Tuebingen, Germany}
+\newcommand{\NewEntry}[2]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 \vspace{0.5em}\\}
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon}
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}}
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}\\}
+\newcommand{\SubHeading}[1]{\vspace{.5em}\noindent\spacedlowsmallcaps{#1}\vspace{0.7em}\\}
+\SubHeading{Research Experiences}
+\NewEntry{Universitat Tuebingen}{Prof. Dr. Niels Birbaumer}
+\NewEntry{Universitat Tuebingen}{Prof. Dr. Niels Birbaumer}
+\end{document}
