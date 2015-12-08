@@ -21,6 +21,7 @@ class CV(Environment):
     _latex_name = 'cv'
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self.arguments = UnsafeCommand('spacedallcaps', self.arguments)
 
 class MarginText(CommandBase):
     _latex_name = 'MarginText'
@@ -66,7 +67,7 @@ doc.append(UnsafeCommand('newcommand', r'\SubHeading', options=1,
 # doc.preamble.append(Command('date', NoEscape(r'\today')))
 
 # Fill Document
-with doc.create(CV(arguments=UnsafeCommand('spacedallcaps', 'Nicholas A. Del Grosso'))) as cv:
+with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
     cv.append(SubHeading('Research Experiences'))
     cv.append(NewEntry(['Universitat Tuebingen', 'Prof. Dr. Niels Birbaumer']))
     cv.append(MarginText('May 2013'))
