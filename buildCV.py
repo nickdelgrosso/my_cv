@@ -57,14 +57,13 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
     with open('research_experiences.yaml') as f:
         data = yaml.load_all(f)
         for entry in data:
-            if '2012' in entry['StartDate']:
-                cv.append(NewEntry([
-                    ' -\n  '.join([entry['StartDate'], entry['EndDate']]),
-                    entry['Institute'],
-                    entry['Supervisor'],
-                    entry['Description']
+            cv.append(NewEntry([
+                ' -\n  '.join([entry['StartDate'], entry['EndDate']]),
+                entry['Institute'],
+                entry['Supervisor'],
+                entry['Description']
 
-                ]))
+            ]))
 
     cv.append(vspace('2em'))
     cv.append(includegraphics(options='width=5cm', arguments='images/Signaturetransparant.png'))
