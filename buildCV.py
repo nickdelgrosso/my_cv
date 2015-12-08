@@ -17,6 +17,9 @@ doc.packages.append(Package('currvita', ['LabelsAligned']))
 doc.packages.append(Package('hyperref'))
 #
 # Make New Commands
+class CV(Environment):
+    _latex_name = 'cv'
+
 class MarginText(CommandBase):
     _latex_name = 'MarginText'
 doc.append(UnsafeCommand('newcommand', r'\MarginText', options=1,
@@ -56,17 +59,16 @@ doc.append(UnsafeCommand('newcommand', r'\SubHeading', options=1,
                          extra_arguments=r'\vspace{.5em}\noindent\spacedlowsmallcaps{#1}\vspace{0.7em}\\'))
 
 # Make Preamble
-doc.preamble.append(Command('title', 'Research Experiences'))
-doc.preamble.append(Command('author', 'Nicholas A. Del Grosso'))
-doc.preamble.append(Command('date', NoEscape(r'\today')))
+# doc.preamble.append(Command('title', 'Research Experiences'))
+# doc.preamble.append(Command('author', 'Nicholas A. Del Grosso'))
+# doc.preamble.append(Command('date', NoEscape(r'\today')))
 
 # Fill Document
-doc.append(SubHeading('Research Experiences'))
-doc.append(NewEntry(['Universitat Tuebingen', 'Prof. Dr. Niels Birbaumer']))
-doc.append(MarginText('May 2013'))
-doc.append(Description('This is a description of what I did during this time.  It is the longest part of the entry, and can take up several lines.  Hopefully, it will look really good.'))
-
-doc.append(NewEntry(['Universitat Tuebingen', 'Prof. Dr. Niels Birbaumer']))
+with doc.create(CV(arguments=UnsafeCommand('spacedallcaps', 'Nicholas A. Del Grosso'))) as cv:
+    cv.append(SubHeading('Research Experiences'))
+    cv.append(NewEntry(['Universitat Tuebingen', 'Prof. Dr. Niels Birbaumer']))
+    cv.append(MarginText('May 2013'))
+    cv.append(Description('This is a description of what I did during this time.  It is the longest part of the entry, and can take up several lines.  Hopefully, it will look really good.'))
 
 doc.generate_pdf()
 doc.generate_tex()
