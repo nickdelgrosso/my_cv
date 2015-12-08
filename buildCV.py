@@ -61,17 +61,26 @@ class SubHeading(CommandBase):
 doc.append(UnsafeCommand('newcommand', r'\SubHeading', options=1,
                          extra_arguments=r'\vspace{.5em}\noindent\spacedlowsmallcaps{#1}\vspace{0.7em}\\'))
 
-# Make Preamble
-# doc.preamble.append(Command('title', 'Research Experiences'))
-# doc.preamble.append(Command('author', 'Nicholas A. Del Grosso'))
-# doc.preamble.append(Command('date', NoEscape(r'\today')))
+class VSpace(CommandBase):
+    _latex_name = 'vspace'
+
+class HSpace(CommandBase):
+    _latex_name = 'hspace'
+
+class IncludeGraphics(CommandBase):
+    _latex_name = 'includegraphics'
 
 # Fill Document
 with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
+
+    cv.append(UnsafeCommand('vspace', '2em'))
     cv.append(SubHeading('Research Experiences'))
     cv.append(NewEntry(['Universitat Tuebingen', 'Prof. Dr. Niels Birbaumer']))
     cv.append(MarginText('May 2013'))
     cv.append(Description('This is a description of what I did during this time.  It is the longest part of the entry, and can take up several lines.  Hopefully, it will look really good.'))
+
+    cv.append(VSpace('2em'))
+    cv.append(IncludeGraphics(options='width=5cm', arguments='images/Signaturetransparant.png'))
 
 doc.generate_pdf()
 doc.generate_tex()
