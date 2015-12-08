@@ -54,9 +54,16 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
     cv.append(vspace('2em'))
 
     cv.append(SubHeading('Research Experiences'))
-    cv.append(NewEntry(['June 222', 'Universitat Tuebingen', 'Prof. Dr. Niels Birbaumer',
-                        'This is a description of what I did during this time.  It is the longest part of the entry, and can take up several lines.  Hopefully, it will look really good.'
-              ]))
+    with open('research_experiences.yaml') as f:
+        data = yaml.load_all(f)
+        for entry in data:
+            cv.append(NewEntry([
+                ' -\n  '.join([entry['StartDate'], entry['EndDate']]),
+                entry['Institute'],
+                entry['Supervisor'],
+                entry['Description']
+
+            ]))
 
     cv.append(vspace('2em'))
     cv.append(includegraphics(options='width=5cm', arguments='images/Signaturetransparant.png'))
