@@ -1,5 +1,6 @@
 __author__ = 'nicholas'
 
+import yaml
 from pylatex import Document, Section, Subsection, Command, Package, UnsafeCommand
 from pylatex.base_classes import CommandBase, Arguments
 from pylatex.utils import italic, NoEscape
