@@ -11,6 +11,7 @@ doc = Document('docs/delgrosso_cv',
 
 # Set Packages
 doc.packages.append(Package('marginnote'))
+doc.packages.append(UnsafeCommand('reversemarginpar'))
 doc.packages.append(Package('graphicx'))
 doc.packages.append(Package('classicthesis', ['nochapters']))
 doc.packages.append(Package('currvita', ['LabelsAligned']))
@@ -71,9 +72,12 @@ class IncludeGraphics(CommandBase):
     _latex_name = 'includegraphics'
 
 # Fill Document
+
+doc.append(UnsafeCommand('thispagestyle', 'empty'))
 with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
 
-    cv.append(UnsafeCommand('vspace', '2em'))
+    cv.append(VSpace('2em'))
+
     cv.append(SubHeading('Research Experiences'))
     cv.append(NewEntry(['Universitat Tuebingen', 'Prof. Dr. Niels Birbaumer']))
     cv.append(MarginText('May 2013'))
