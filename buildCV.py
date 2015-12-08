@@ -19,6 +19,8 @@ doc.packages.append(Package('hyperref'))
 # Make New Commands
 class CV(Environment):
     _latex_name = 'cv'
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
 
 class MarginText(CommandBase):
     _latex_name = 'MarginText'
