@@ -14,9 +14,11 @@ doc = Document('docs/delgrosso_cv',
 doc.packages.append(Package('marginnote'))
 doc.packages.append(UnsafeCommand('reversemarginpar'))
 doc.packages.append(Package('graphicx'))
-doc.packages.append(Package('classicthesis', ['nochapters']))
-doc.packages.append(Package('currvita', ['LabelsAligned']))
+doc.packages.append(Package('classicthesis', options='nochapters'))
+doc.packages.append(Package('currvita', options='LabelsAligned'))
 doc.packages.append(Package('hyperref'))
+doc.packages.append(UnsafeCommand('hypersetup', extra_arguments=r'colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon'))
+
 #
 # Make New Commands via a metaclass
 for name in ['MarginText', 'NewEntry', 'Description', 'DescMarg', 'SubHeading',
@@ -35,7 +37,6 @@ doc.append(UnsafeCommand('newcommand', r'\MarginText', options=1, extra_argument
 doc.append(UnsafeCommand('newlength', r'\datebox', ))
 doc.append(UnsafeCommand('settowidth', r'\datebox', extra_arguments='Tuebingen, Germany'))
 
-doc.append(UnsafeCommand('hypersetup', extra_arguments=r'colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon'))
 doc.append(UnsafeCommand('renewcommand', r'\cvheadingfont', extra_arguments=r'\LARGE\color{Maroon}'))
 
 doc.append(UnsafeCommand('newcommand', r'\Description', options=1,
