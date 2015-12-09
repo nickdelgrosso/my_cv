@@ -19,7 +19,7 @@ doc.packages.append(Package('currvita', ['LabelsAligned']))
 doc.packages.append(Package('hyperref'))
 #
 # Make New Commands via a metaclass
-for name in ['MarginText', 'NewEntry', 'Description', 'SubHeading', 'vspace', 'hspace', 'includegraphics']:
+for name in ['MarginText', 'NewEntry', 'Description', 'Description2', 'SubHeading', 'vspace', 'hspace', 'includegraphics']:
     globals()[name] = type(name, (CommandBase,), {'_latex_name': name})
 
 # Custom CV Environment behavior
@@ -40,6 +40,8 @@ doc.append(UnsafeCommand('renewcommand', r'\cvheadingfont', extra_arguments=r'\L
 doc.append(UnsafeCommand('newcommand', r'\Description', options=1,
                          extra_arguments=r'\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}'))
 
+doc.append(UnsafeCommand('newcommand', r'\Description2' ,options=2,
+                         extra_arguments=r'\MarginText{#1}\Description{#2}'))
 doc.append(UnsafeCommand('newcommand', r'\NewEntry', options=4,
         extra_arguments=r'\MarginText{#1}\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#2}}\hspace{1.5em} #3 \vspace{0.5em}\\\Description{#4}'))
 
@@ -100,6 +102,10 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
                 for entry in data[section]:
                     with doc.create(Itemize()) as itemize:
                         itemize.add_item(entry)
+
+            elif section == 'Awards':
+                for entry in data[section]:
+                    cv.append(entry['Date'])
 
             # Spacing between sections
             cv.append(vspace('2em'))
