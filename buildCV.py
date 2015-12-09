@@ -56,7 +56,7 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
 
     with open('research_experiences.yaml') as f:
         data = yaml.load(f)
-        for section in ['Research Experience', 'Industry Experience']:
+        for section in data:
             cv.append(SubHeading(section))
             if section == 'Research Experience':
                 for entry in data[section]:
@@ -76,6 +76,10 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
                         entry['Institute'],
                         entry['Description']
                     ]))
+
+            elif section == 'Journal Publications':
+                for entry in data[section]:
+                    cv.append(Description(entry))
 
 
             # Spacing between sections
