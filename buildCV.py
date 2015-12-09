@@ -19,7 +19,8 @@ doc.packages.append(Package('currvita', ['LabelsAligned']))
 doc.packages.append(Package('hyperref'))
 #
 # Make New Commands via a metaclass
-for name in ['MarginText', 'NewEntry', 'Description', 'DescMarg', 'SubHeading', 'vspace', 'hspace', 'includegraphics']:
+for name in ['MarginText', 'NewEntry', 'Description', 'DescMarg', 'SubHeading',
+             'vspace', 'hspace', 'includegraphics', 'Email']:
     globals()[name] = type(name, (CommandBase,), {'_latex_name': name})
 
 # Custom CV Environment behavior
@@ -48,7 +49,8 @@ doc.append(UnsafeCommand('newcommand', r'\NewEntry', options=4,
 doc.append(UnsafeCommand('newcommand', r'\SubHeading', options=1,
                          extra_arguments=r'\vspace{.5em}\noindent\spacedlowsmallcaps{#1}\vspace{0.7em}\\'))
 
-
+doc.append(UnsafeCommand('newcommand', r'\Email', options=1,
+                         extra_arguments=r'\href{mailto:#1}{#1}'))
 # Fill Document
 doc.append(UnsafeCommand('thispagestyle', 'empty'))
 with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
@@ -60,6 +62,12 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
         data = yaml.load(f)
         for section in data:
             cv.append(SubHeading(section))
+            if section == 'Personal Info':
+                for key, value in data[section].items():
+                    if 'mail' in key:
+                        value = Email(value)
+                    cv.append(NewEntry([key, value, '', '']))
+
             if section == 'Research Experience':
                 for entry in data[section]:
                     entry = defaultdict(str, entry)
@@ -105,8 +113,6 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
 
             elif section == 'Awards':
                 for entry in data[section]:
-                    import pdb
-                    pdb.set_trace()
                     cv.append(DescMarg([entry['Date'], entry['Title']]))
 
             # Spacing between sections
