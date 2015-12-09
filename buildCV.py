@@ -81,6 +81,16 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
                 for entry in data[section]:
                     cv.append(Description(entry))
 
+            elif section == 'Conference Publications':
+                for entry in data[section]:
+                    entry = defaultdict(str, entry)
+                    cv.append(NewEntry([
+                        entry['Date'],
+                        entry['Conference'],
+                        entry['Title'],
+                        entry['Description']
+                    ]))
+
 
             # Spacing between sections
             cv.append(vspace('2em'))
