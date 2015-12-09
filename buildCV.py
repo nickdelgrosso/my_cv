@@ -51,23 +51,37 @@ doc.append(UnsafeCommand('newcommand', r'\SubHeading', options=1,
 doc.append(UnsafeCommand('thispagestyle', 'empty'))
 with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
 
+    # Space between title and the first section
     cv.append(vspace('2em'))
 
     with open('research_experiences.yaml') as f:
         data = yaml.load(f)
-        for section in ['Research Experience']:
+        for section in ['Research Experience', 'Industry Experience']:
             cv.append(SubHeading(section))
-            for entry in data[section]:
-                entry = defaultdict(str, entry)
-                cv.append(NewEntry([
-                    ' -\n  '.join([entry['StartDate'], entry['EndDate']]),
-                    entry['Institute'],
-                    entry['Supervisor'],
-                    entry['Description']
+            if section == 'Research Experience':
+                for entry in data[section]:
+                    entry = defaultdict(str, entry)
+                    cv.append(NewEntry([
+                        ' -\n  '.join([entry['StartDate'], entry['EndDate']]),
+                        entry['Institute'],
+                        entry['Supervisor'],
+                        entry['Description']
+                    ]))
+            elif section == 'Industry Experience':
+                for entry in data[section]:
+                    entry = defaultdict(str, entry)
+                    cv.append(NewEntry([
+                        ' -\n '.join(entry['StartDate', entry['EndDate']]),
+                        entry['Position'],
+                        entry['Institute'],
+                        entry['Description']
+                    ]))
 
-                ]))
+
+            # Spacing between sections
             cv.append(vspace('2em'))
 
+    # Add a signature at the bottom
     cv.append(includegraphics(options='width=5cm', arguments='images/Signaturetransparant.png'))
 
 

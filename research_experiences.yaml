@@ -28,6 +28,7 @@ Research Experience:
     Supervisor: &supCorn Prof. Dr. Cornelius Schwarz
     StartDate: Oct 2012
     EndDate: Nov 2012
+    Description: In this lab rotation, I trained rats to perform whisking in response to barrel cortex stimulation viachronically-implanted electrodes, mapping stimulation sensitivity to each cortical layer.
     Reference:
       Name: *supCorn
       Email: cornelius.chwarz@uni-tuebingen.de
@@ -56,3 +57,22 @@ Research Experience:
     StartDate: Nov 2006
     EndDate: March 2007
     Description: Measured dessication rates in the bed bug and isolated fungal growth in three species of cockroach. These studies resulted in a publication in a peer-reviewed journal and a poster presentation at an undergraduate research conference.
+Industry Experience:
+  - Position: Technical Consultant
+    Institute: UKT Psychosomatic Med. and Sports Med.
+    StartDate: April 2015
+    EndDate: June 2015
+    Description: I evaluated and designed a solution for performing medical science studies in a placebo study, and taught the PhD student who carried out the study over several remote sessions and a few travel consultations.
+  - Position: Research Internship
+    Institute: The Neuromarketing Labs
+    StartDate: Nov 2012
+    EndDate: Dec 2012
+    Description: I completed set-up of an EEG laboratory, including software calibration and noise measurements. Designed and ran two experiments estimating the evoked responses of semantic agreement and price agreement, then analyzed the data. The results from the second experiment are the basis of Dr. M\"{u}ller’s recently-published book, \emph{Neuropricing}. Currently volunteering as an EEG consultant by giving one-day workshops on Fieldtrip, SPM, and artifact correction methods.
+    Reference:
+      Name: Dr. Kai-Markus M\"{u}ller
+      Email: km.mueller@neuromarketing-labs.com
+
+
+
+
+
