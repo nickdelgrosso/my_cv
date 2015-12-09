@@ -5,7 +5,7 @@ from pylatex import Document, Section, Subsection, Command, Package, UnsafeComma
 from pylatex.base_classes import CommandBase, Arguments
 from pylatex.utils import italic, NoEscape
 from pylatex.document import Environment
-
+from collections import defaultdict
 
 doc = Document('docs/delgrosso_cv',
                documentclass='article')
@@ -57,6 +57,7 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
     with open('research_experiences.yaml') as f:
         data = yaml.load_all(f)
         for entry in data:
+            entry = defaultdict(str, entry)
             cv.append(NewEntry([
                 ' -\n  '.join([entry['StartDate'], entry['EndDate']]),
                 entry['Institute'],
