@@ -60,7 +60,8 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
 
     with open('research_experiences.yaml') as f:
         data = yaml.load(f)
-        for section in data:
+        for section in ['Personal Info', 'Goals', 'Research Experience', 'Industry Experience',
+                        'Journal Publications', 'Conference Publications', 'Skills', 'Awards']:
             cv.append(SubHeading(section))
             if section == 'Personal Info':
                 for key, value in data[section].items():
