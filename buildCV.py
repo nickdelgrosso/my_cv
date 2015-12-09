@@ -105,9 +105,9 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
                     ]))
 
             elif section == 'Skills':
-                for entry in data[section]:
-                    with doc.create(Itemize()) as itemize:
-                        itemize.add_item(bold(entry) + ': ' + ', '.join(data[section][entry]))
+                with doc.create(Itemize()) as itemize:
+                    for entry in data[section]:
+                        itemize.add_item(bold(entry) + NoEscape(': ') + NoEscape(', '.join(data[section][entry])))
 
             elif section == 'Goals':
                 for entry in data[section]:
