@@ -32,18 +32,19 @@ class CV(Environment):
         super().__init__(*args, **kwargs)
         self.arguments = UnsafeCommand('spacedallcaps', self.arguments)
 
-doc.append(UnsafeCommand('newcommand', r'\MarginText', options=1, extra_arguments=r'\marginpar{\raggedleft\small#1}'))
-
 doc.append(UnsafeCommand('newlength', r'\datebox', ))
 doc.append(UnsafeCommand('settowidth', r'\datebox', extra_arguments='Tuebingen, Germany'))
 
 doc.append(UnsafeCommand('renewcommand', r'\cvheadingfont', extra_arguments=r'\LARGE\color{Maroon}'))
+
+doc.append(UnsafeCommand('newcommand', r'\MarginText', options=1, extra_arguments=r'\marginpar{\raggedleft\small#1}'))
 
 doc.append(UnsafeCommand('newcommand', r'\Description', options=1,
                          extra_arguments=r'\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}'))
 
 doc.append(UnsafeCommand('newcommand', r'\DescMarg', options=2,
                          extra_arguments=r'\MarginText{#1} \Description{#2}'))
+
 doc.append(UnsafeCommand('newcommand', r'\NewEntry', options=4,
         extra_arguments=r'\MarginText{#1}\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#2}}\hspace{1.5em} #3 \vspace{0.5em}\\\Description{#4}'))
 
