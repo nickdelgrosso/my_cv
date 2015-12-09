@@ -55,7 +55,7 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
 
     cv.append(SubHeading('Research Experiences'))
     with open('research_experiences.yaml') as f:
-        data = yaml.load_all(f)
+        data = yaml.load(f)
         for entry in data:
             entry = defaultdict(str, entry)
             cv.append(NewEntry([

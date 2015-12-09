@@ -1,30 +1,27 @@
 ---
-Institute: Ludwig-Maximillians Universit\"{a}t
-Supervisor: Prof. Dr. Anton Sirota
-StartDate: May 2013
-EndDate: Present
-Description: Programmed a 3D graphics engine in Python to build virtual reality system for freely moving rats, supervised students in programming, engineering, and cognitive science projects, organized weekly journal clubs, and ordered new equipment.
-Reference:
-  Name: Prof. Dr. Anton Sirota
-  Email: anton.sirota@cin.uni-tuebiungen.de
----
-Institute: Universit\"{a}t T\"{u}bingen
-Supervisor: Prof. Dr. Christoph Braun
-StartDate: Aug 2012
-EndDate: May 2013
-Description: Wrote a research grant to study the top-down and bottom-up interactions by computational modeling information propagation in early sensory pathways as measured by MEG, designed and administrated an institute wiki, organized a student lecture series, and supervised two students’ EEG research projects.
-Reference:
-  Name: Prof. Dr. Christoph Braun
-  Email: christoph.braun@uni-tuebingen.de
----
-Institute: Universit\"{a}t T\"{u}bingen
-Supervisor: Prof. Dr. Niels Birbaumer
-StartDate: Nov 2011
-EndDate: July 2012
-Description: Programmed in Matlab a time-frequency and evoked potential analysis on three years’ worth of MEG data assessing longitudinal changes in stroke patients receiving physiotherapy.
-Reference:
-  Name: Dr. Niels Birbaumer
-  Email: niels.birbaumer@uni-tuebingen.de
----
-Institute: Fake Place
-Supervisor: Fake Supervisor
+- Institute: Ludwig-Maximillians Universit\"{a}t
+  Supervisor: Prof. Dr. Anton Sirota
+  StartDate: May 2013
+  EndDate: Present
+  Description: Programmed a 3D graphics engine in Python to build virtual reality system for freely moving rats, supervised students in programming, engineering, and cognitive science projects, organized weekly journal clubs, and ordered new equipment.
+  Reference:
+    Name: Prof. Dr. Anton Sirota
+    Email: anton.sirota@cin.uni-tuebiungen.de
+- Institute: &instTu Universit\"{a}t T\"{u}bingen
+  Supervisor: &supChrist Prof. Dr. Christoph Braun
+  StartDate: Aug 2012
+  EndDate: May 2013
+  Description: Wrote a research grant to study the top-down and bottom-up interactions by computational modeling information propagation in early sensory pathways as measured by MEG, designed and administrated an institute wiki, organized a student lecture series, and supervised two students’ EEG research projects.
+  Reference:
+    Name: *supChrist
+    Email: christoph.braun@uni-tuebingen.de
+- Institute: *instTu
+  Supervisor: &supNiels Prof. Dr. Niels Birbaumer
+  StartDate: Nov 2011
+  EndDate: July 2012
+  Description: Programmed in Matlab a time-frequency and evoked potential analysis on three years’ worth of MEG data assessing longitudinal changes in stroke patients receiving physiotherapy.
+  Reference:
+    Name: *supNiels
+    Email: niels.birbaumer@uni-tuebingen.de
+- Institute: Fake Place
+  Supervisor: Fake Supervisor
