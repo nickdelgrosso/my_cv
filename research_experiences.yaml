@@ -1,6 +1,6 @@
 ---
 Personal Info:
-  Address: Karl-Witthalm-Str. 3, 81375 M\"{u}nchen, Germany
+  Address: Karl-Witthalm-Str. 3, 81375 München, Germany
   Telephone: +49 170 8253289
   E-mail: delgrosso.nick@gmail.com
 
@@ -13,14 +13,14 @@ Education:
   - Degree: M.Sc. Neuroscience
     Date: Aug 2012
     Institute: Max Planck International Research School, Graduate School of Neural and Behavioural Sciences
-    Location: T\"{u}bingen, Germany
+    Location: Tübingen, Germany
   - Degree: B.Sc. Psychology
     Date: May 2010
     Institute: Wittenberg University
     Location: Springfield, Ohio
 
 Research Experience:
-  - Institute: Ludwig-Maximillians Universit\"{a}t
+  - Institute: Ludwig-Maximillians Universität
     Supervisor: Prof. Dr. Anton Sirota
     StartDate: May 2013
     EndDate: Present
@@ -28,7 +28,7 @@ Research Experience:
     Reference:
       Name: Prof. Dr. Anton Sirota
       Email: anton.sirota@cin.uni-tuebiungen.de
-  - Institute: &instTu Universit\"{a}t T\"{u}bingen
+  - Institute: &instTu Universität Tübingen
     Supervisor: &supChrist Prof. Dr. Christoph Braun
     StartDate: Aug 2012
     EndDate: May 2013
@@ -88,9 +88,9 @@ Industry Experience:
     Institute: The Neuromarketing Labs
     StartDate: Nov 2012
     EndDate: Dec 2012
-    Description: I completed set-up of an EEG laboratory, including software calibration and noise measurements. Designed and ran two experiments estimating the evoked responses of semantic agreement and price agreement, then analyzed the data. The results from the second experiment are the basis of Dr. M\"{u}ller’s recently-published book, \emph{Neuropricing}. Currently volunteering as an EEG consultant by giving one-day workshops on Fieldtrip, SPM, and artifact correction methods.
+    Description: I completed set-up of an EEG laboratory, including software calibration and noise measurements. Designed and ran two experiments estimating the evoked responses of semantic agreement and price agreement, then analyzed the data. The results from the second experiment are the basis of Dr. Müller’s recently-published book, "Neuropricing". Currently volunteering as an EEG consultant by giving one-day workshops on Fieldtrip, SPM, and artifact correction methods.
     Reference:
-      Name: Dr. Kai-Markus M\"{u}ller
+      Name: Dr. Kai-Markus Müller
       Email: km.mueller@neuromarketing-labs.com
 
 
@@ -105,11 +105,11 @@ Conference Publications:
   - Conference: Society for Neuroscience
     Date: Nov 2014
     Title: ratCAVE, A Novel Virtual Reality System for Freely-Moving Rodents.
-  - Conference: NENA T\"{u}bingen
+  - Conference: &nena NENA Tübingen
     Date: Nov. 2012
     Title: Interpreting (M)EEG, A First Look at Dynamic Causal Modeling.
     Description: Introduced a probabilistic nonlinear modeling framework for interpretation of MEG and EEG data, along with the results of a pilot study in which we applied the approach.
-  - Conference: NENA T\"{u}bingen
+  - Conference: *nena
     Date: Nov. 2011
     Title: The Intrinsic Bias During the Blind-Walking Task is Not Caused by an Aberrant Intrinsic Ground-Slope Model.
   - Conference: Visual Sciences Society
