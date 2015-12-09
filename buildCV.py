@@ -1,9 +1,9 @@
 __author__ = 'nicholas'
 
 import yaml
-from pylatex import Document, Section, Subsection, Command, Package, UnsafeCommand
+from pylatex import Document, Section, Subsection, Command, Package, UnsafeCommand, Itemize
 from pylatex.base_classes import CommandBase, Arguments
-from pylatex.utils import italic, NoEscape
+from pylatex.utils import italic, NoEscape, bold
 from pylatex.document import Environment
 from collections import defaultdict
 
@@ -90,6 +90,11 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
                         entry['Title'],
                         entry['Description']
                     ]))
+
+            elif section == 'Skills':
+                for entry in data[section]:
+                    with doc.create(Itemize()) as itemize:
+                        itemize.add_item(bold(entry) + ': ' + ', '.join(data[section][entry]))
 
 
             # Spacing between sections
