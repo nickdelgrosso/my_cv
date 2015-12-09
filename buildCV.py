@@ -96,6 +96,10 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
                     with doc.create(Itemize()) as itemize:
                         itemize.add_item(bold(entry) + ': ' + ', '.join(data[section][entry]))
 
+            elif section == 'Goals':
+                for entry in data[section]:
+                    with doc.create(Itemize()) as itemize:
+                        itemize.add_item(entry)
 
             # Spacing between sections
             cv.append(vspace('2em'))
