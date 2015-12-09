@@ -71,7 +71,7 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
                         value = Email(value)
                     cv.append(NewEntry([key, value, '', '']))
 
-            if section == 'Research Experience':
+            elif section == 'Research Experience':
                 for entry in data[section]:
                     entry = defaultdict(str, entry)
                     cv.append(NewEntry([
