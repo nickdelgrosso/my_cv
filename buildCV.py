@@ -53,20 +53,21 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
 
     cv.append(vspace('2em'))
 
-    cv.append(SubHeading('Research Experiences'))
     with open('research_experiences.yaml') as f:
         data = yaml.load(f)
-        for entry in data:
-            entry = defaultdict(str, entry)
-            cv.append(NewEntry([
-                ' -\n  '.join([entry['StartDate'], entry['EndDate']]),
-                entry['Institute'],
-                entry['Supervisor'],
-                entry['Description']
+        for section in ['Research Experience']:
+            cv.append(SubHeading(section))
+            for entry in data[section]:
+                entry = defaultdict(str, entry)
+                cv.append(NewEntry([
+                    ' -\n  '.join([entry['StartDate'], entry['EndDate']]),
+                    entry['Institute'],
+                    entry['Supervisor'],
+                    entry['Description']
 
-            ]))
+                ]))
+            cv.append(vspace('2em'))
 
-    cv.append(vspace('2em'))
     cv.append(includegraphics(options='width=5cm', arguments='images/Signaturetransparant.png'))
 
 
