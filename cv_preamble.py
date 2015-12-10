@@ -37,9 +37,12 @@ def get_cv_doc(filename):
                              extra_arguments=r'\hangindent=2em\hangafter=0\footnotesize{#1}\par\normalsize\vspace{1em}'))
 
     doc.packages.append(UnsafeCommand('newcommand', r'\DescMarg', options=2,
-                             extra_arguments=r'\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small} \MarginText{#1} #2 \vspace{0.5em}\\'))
+                             extra_arguments=r'\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small} \MarginText{#1} #2 \vspace{0.3em}\\'))
 
     ##################
+    doc.packages.append(UnsafeCommand('newcommand', r'\HeaderOnly', options=2,
+                                      extra_arguments= r'\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 \vspace{0.5em}\\'))
+
     doc.packages.append(UnsafeCommand('newcommand', r'\EntryHeader', options=3,
                              extra_arguments=r'\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#2}}\hspace{1.5em} \MarginText{#1} #3 \vspace{0.5em}'))
 
@@ -56,7 +59,7 @@ def get_cv_doc(filename):
     return doc
 
 # Make New Commands via a metaclass
-for name in ['MarginText', 'NewEntry', 'Description', 'DescMarg', 'SubHeading', 'EntryHeader',
+for name in ['MarginText', 'NewEntry', 'Description', 'DescMarg', 'SubHeading', 'EntryHeader', 'HeaderOnly',
              'vspace', 'hspace', 'includegraphics', 'Email']:
     globals()[name] = type(name, (CommandBase,), {'_latex_name': name})
 

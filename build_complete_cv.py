@@ -59,8 +59,7 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
                 for key, value in data[section].items():
                     if 'mail' in key:
                         value = Email(value)
-                    cv.append(EntryHeader(['', key, value]))
-                    cv.append(NoEscape(r'\\'))
+                    cv.append(HeaderOnly([key, value]))
 
             elif section == 'Research Experience':
                 build_section(cv, data, 'Research Experience', format_research)
