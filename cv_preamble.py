@@ -68,19 +68,20 @@ for name in ['MarginText', 'NewEntry', 'Description', 'DescMarg', 'SubHeading', 
 # Custom CV Environment behavior
 class CV(Environment):
     _latex_name = 'cv'
-    def __init__(self, *args, **kwargs):
+    def __init__(self, data, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self.cvdata = data
         self.arguments = UnsafeCommand('spacedallcaps', self.arguments)
         self.append(vspace('2em')) # Space between title and the first section
 
-    def build_section_itemized(self, data, section_name, item_formatter):
+    def build_section_itemized(self, section_name, item_formatter):
         self.append(SubHeading(section_name))
-        for entry in data[section_name]:
+        for entry in self.cvdata[section_name]:
             with self.create(Itemize()) as itemize:
                 itemize.add_item(item_formatter(entry))
 
-    def build_section(self, data, section_name, formatter):
+    def build_section(self, section_name, formatter):
         self.append(SubHeading(section_name))
-        for entry in data[section_name]:
+        for entry in self.cvdata[section_name]:
             entry = defaultdict(str, entry) if isinstance(entry, dict) else entry
             self.append(formatter(entry))
