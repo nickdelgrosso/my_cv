@@ -7,8 +7,8 @@ doc = get_cv_doc('docs/delgrosso_cv')
 
 with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
 
-    # Space between title and the first section
-    cv.append(vspace('2em'))
+
+
 
     with open('research_experiences.yaml') as f:
 

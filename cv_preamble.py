@@ -71,6 +71,7 @@ class CV(Environment):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.arguments = UnsafeCommand('spacedallcaps', self.arguments)
+        self.append(vspace('2em')) # Space between title and the first section
 
     def build_section_itemized(self, data, section_name, item_formatter):
         self.append(SubHeading(section_name))
