@@ -1,7 +1,20 @@
+from collections import defaultdict
 from pylatex import Document, Section, Subsection, Command, Package, UnsafeCommand, Itemize
 from pylatex.base_classes import CommandBase, Arguments
 from pylatex.utils import italic, NoEscape, bold
 from pylatex.document import Environment
+
+def build_section(cv_doc, data, section_name, formatter):
+    cv_doc.append(SubHeading(section_name))
+    for entry in data[section_name]:
+        entry = defaultdict(str, entry) if isinstance(entry, dict) else entry
+        cv_doc.append(formatter(entry))
+
+def build_section_itemized(cv_doc, data, section_name, item_formatter):
+    cv_doc.append(SubHeading(section_name))
+    for entry in data[section_name]:
+        with cv_doc.create(Itemize()) as itemize:
+            itemize.add_item(item_formatter(entry))
 
 def get_cv_doc(filename):
     """Returns a pylatex.Document instance pre-loaded with everything needed for my cv style."""
