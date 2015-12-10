@@ -129,11 +129,11 @@ Conference Publications:
     Title: Hemispheric specialization for face processing revealed by use of thatcherized and feature-distorted faces.
 
 Skills:
-  Languages:
+  - Languages:
     - English (Mother Tongue)
     - German (Level B1)
     - French (Level A1-2)
-  Programming:
+  - Programming:
     - Python
     - Matlab
     - C-Sharp
@@ -143,7 +143,7 @@ Skills:
     - C
     - Bash
     - LaTeX
-  Stimulus Presentation:
+  - Stimulus Presentation:
     - Psychopy
     - Neurobs Presentation
     - Psychophysics Toolbox
@@ -151,7 +151,7 @@ Skills:
     - Pyglet
     - SuperLab
     - RatCAVE
-  Statistical Analysis:
+  - Statistical Analysis:
     - Statistical Parametric Mapping (SPM)
     - SPSS
     - R
@@ -159,20 +159,20 @@ Skills:
     - Fieldtrip
     - gTec Analyze
     - BrainVision Analyzer
-  Graphics:
+  - Graphics:
     - Blender
     - Adobe Suite (Photoshop, Illustrator, and InDesign)
     - OpenGL
     - Google SketchUp
     - GIMP
     - Inkspace
-  Wet Lab Skills:
+  - Wet Lab Skills:
     - Rat Neurosurgery
     - Animal Behavioral training (rats and monkeys)
     - in vivo electrophysiology (single needle electrodes, chronically-implanted electrode arrays, noninvasive arrays of EEG electrodes and MEG sensors)
     - Basic Electronics
     - Comfortable with building custom laboratory equipment
-  EEG System Experience:
+  - EEG System Experience:
     - BrainProducts
     - gTec
     - Grass Instruments
