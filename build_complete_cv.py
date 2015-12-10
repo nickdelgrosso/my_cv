@@ -9,12 +9,6 @@ doc = get_cv_doc('docs/delgrosso_cv')
 def format_skill_item(entry):
     return bold(entry) + NoEscape(': ') + NoEscape(', '.join(entry.values()))
 
-def format_research(entry):
-    return NewEntry([' -\n  '.join([entry['StartDate'], entry['EndDate']]),
-                     entry['Institute'],
-                     entry['Supervisor'],
-                     entry['Description']
-                    ])
 
 def format_personal(entry):
     for key, value in entry.items():
@@ -49,6 +43,7 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
                                                                                x['Title'], x['Description']]))
 
         # build_section_itemized(cv, data, 'Skills', format_skill_item)
+
         build_section(cv, data, 'Awards', lambda x: DescMarg([x['Date'], x['Title']]))
 
     # Add a signature at the bottom
