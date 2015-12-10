@@ -128,7 +128,7 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
 
             elif section == 'Education':
                 for entry in data[section]:
-                    cv.append(MarginText([
+                    cv.append(NewEntry([
                         entry['Date'], entry['Degree'], entry['Institute'], '']))
 
             # Spacing between sections
