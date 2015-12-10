@@ -42,6 +42,12 @@ def format_awards(entry):
 def format_education(entry):
     return NewEntry([entry['Date'], entry['Degree'], entry['Institute'], ''])
 
+def format_personal(entry):
+    for key, value in entry.items():
+        if 'mail' in key:
+            value = Email(value)
+        return HeaderOnly([key, value])
+
 with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
 
     # Space between title and the first section
@@ -59,10 +65,7 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
 
             # Section Data
             if section == 'Personal Info':
-                for key, value in data[section].items():
-                    if 'mail' in key:
-                        value = Email(value)
-                    cv.append(HeaderOnly([key, value]))
+                build_section(cv, data, 'Personal Info', format_personal)
 
             elif section == 'Research Experience':
                 build_section(cv, data, 'Research Experience', format_research)
