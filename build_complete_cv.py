@@ -5,17 +5,6 @@ from cv_preamble import *
 
 doc = get_cv_doc('docs/delgrosso_cv')
 
-
-def format_skill_item(entry):
-    return bold(entry) + NoEscape(': ') + NoEscape(', '.join(entry.values()))
-
-
-def format_personal(entry):
-    for key, value in entry.items():
-        if 'mail' in key:
-            value = Email(value)
-        return HeaderOnly([key, value])
-
 with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
 
     # Space between title and the first section
@@ -25,6 +14,11 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
 
         data = yaml.load(f)
 
+        def format_personal(entry):
+            for key, value in entry.items():
+                if 'mail' in key:
+                    value = Email(value)
+                return HeaderOnly([key, value])
         build_section(cv, data, 'Personal Info', format_personal)
 
         build_section_itemized(cv, data, 'Goals', lambda x: x)
@@ -42,6 +36,8 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
         build_section(cv, data, 'Conference Publications', lambda x: NewEntry([x['Date'], x['Conference'],
                                                                                x['Title'], x['Description']]))
 
+        def format_skill_item(entry):
+            return bold(entry) + NoEscape(': ') + NoEscape(', '.join(entry.values()))
         # build_section_itemized(cv, data, 'Skills', format_skill_item)
 
         build_section(cv, data, 'Awards', lambda x: DescMarg([x['Date'], x['Title']]))
