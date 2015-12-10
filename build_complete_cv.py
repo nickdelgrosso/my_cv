@@ -6,6 +6,26 @@ from cv_preamble import *
 
 doc = get_cv_doc('docs/delgrosso_cv')
 
+def build_section(cv_doc, data, section_name, formatter):
+    cv_doc.append(SubHeading(section_name))
+    for entry in data[section_name]:
+        entry = defaultdict(str, entry)
+        cv.append(formatter(entry))
+
+def format_research(entry):
+    return NewEntry([' -\n  '.join([entry['StartDate'], entry['EndDate']]),
+                     entry['Institute'],
+                     entry['Supervisor'],
+                     entry['Description']
+                    ])
+
+def format_industry(entry):
+    return NewEntry([' -\n '.join(entry['StartDate', entry['EndDate']]),
+                     entry['Position'],
+                     entry['Institute'],
+                     entry['Description']
+                    ])
+
 with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
 
     # Space between title and the first section
@@ -19,7 +39,6 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
                         'Journal Publications', 'Conference Publications', 'Skills', 'Awards']:
 
             # Section Title
-
             cv.append(SubHeading(section))
 
             # Section Data
@@ -31,24 +50,10 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
                     cv.append(NoEscape(r'\\'))
 
             elif section == 'Research Experience':
-                for entry in data[section]:
-                    entry = defaultdict(str, entry)
-                    cv.append(NewEntry([
-                        ' -\n  '.join([entry['StartDate'], entry['EndDate']]),
-                        entry['Institute'],
-                        entry['Supervisor'],
-                        entry['Description']
-                    ]))
+                build_section(cv, data, 'Research Experience', format_research)
 
             elif section == 'Industry Experience':
-                for entry in data[section]:
-                    entry = defaultdict(str, entry)
-                    cv.append(NewEntry([
-                        ' -\n '.join(entry['StartDate', entry['EndDate']]),
-                        entry['Position'],
-                        entry['Institute'],
-                        entry['Description']
-                    ]))
+                build_section(cv, data, 'Industry Experience', format_industry)
 
             elif section == 'Journal Publications':
                 for entry in data[section]:
