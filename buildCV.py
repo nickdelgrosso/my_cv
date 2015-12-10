@@ -53,8 +53,7 @@ doc.packages.append(UnsafeCommand('newcommand', r'\Description', options=1,
                          extra_arguments=r'\hangindent=2em\hangafter=0\footnotesize{#1}\par\normalsize\vspace{1em}'))
 
 doc.packages.append(UnsafeCommand('newcommand', r'\DescMarg', options=2,
-                         extra_arguments=r'\Description{\MarginText{#1} #2}'))
-
+                         extra_arguments=r'\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small} \MarginText{#1} #2 \vspace{0.5em}\\'))
 
 ##################
 doc.packages.append(UnsafeCommand('newcommand', r'\EntryHeader', options=3,

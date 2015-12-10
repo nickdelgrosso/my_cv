@@ -12,13 +12,13 @@
 \newlength{\datebox}
 \settowidth{\datebox}{Tuebingen, Germany}
 \renewcommand{\cvheadingfont}{\LARGE\color{Maroon}}
-\newcommand{\MarginText}[1]{\marginpar{\raggedleft\small#1}}
-\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\footnotesize{#1}\par\normalsize\vspace{1em}}
-\newcommand{\DescMarg}[2]{\Description{\MarginText{#1} #2}}
-\newcommand{\EntryHeader}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#2}}\hspace{1.5em} \MarginText{#1} #3 \vspace{0.5em}}
-\newcommand{\NewEntry}[4]{\EntryHeader{#1}{#2}{#3}\\\Description{#4}}
 \newcommand{\SubHeading}[1]{\vspace{.5em}\noindent\spacedlowsmallcaps{#1}\vspace{0.7em}\\}
 \newcommand{\Email}[1]{\href{mailto:#1}{#1}}
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\small#1}}
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\footnotesize{#1}\par\normalsize\vspace{1em}}
+\newcommand{\DescMarg}[2]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small} \MarginText{#1} #2 \vspace{0.5em}\\}
+\newcommand{\EntryHeader}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#2}}\hspace{1.5em} \MarginText{#1} #3 \vspace{0.5em}}
+\newcommand{\NewEntry}[4]{\EntryHeader{#1}{#2}{#3}\\\Description{#4}}
 
 
 \begin{document}
@@ -85,19 +85,19 @@ Build technical skills in a wide variety of fields in order to perform high{-}qu
 \SubHeading{Skills}
 \begin{itemize}
 \item
-\textbf{Stimulus Presentation}: Psychopy, Neurobs Presentation, Psychophysics Toolbox, OpenGL, Pyglet, SuperLab, RatCAVE
-\item
-\textbf{Statistical Analysis}: Statistical Parametric Mapping (SPM), SPSS, R, Matlab Statistics Toolbox, Fieldtrip, gTec Analyze, BrainVision Analyzer
-\item
-\textbf{EEG System Experience}: BrainProducts, gTec, Grass Instruments, CTF
-\item
-\textbf{Wet Lab Skills}: Rat Neurosurgery, Animal Behavioral training (rats and monkeys), in vivo electrophysiology (single needle electrodes, chronically-implanted electrode arrays, noninvasive arrays of EEG electrodes and MEG sensors), Basic Electronics, Comfortable with building custom laboratory equipment
-\item
 \textbf{Graphics}: Blender, Adobe Suite (Photoshop, Illustrator, and InDesign), OpenGL, Google SketchUp, GIMP, Inkspace
+\item
+\textbf{Stimulus Presentation}: Psychopy, Neurobs Presentation, Psychophysics Toolbox, OpenGL, Pyglet, SuperLab, RatCAVE
 \item
 \textbf{Languages}: English (Mother Tongue), German (Level B1), French (Level A1-2)
 \item
 \textbf{Programming}: Python, Matlab, C-Sharp, GLSL, R, LabView, C, Bash, LaTeX
+\item
+\textbf{Wet Lab Skills}: Rat Neurosurgery, Animal Behavioral training (rats and monkeys), in vivo electrophysiology (single needle electrodes, chronically-implanted electrode arrays, noninvasive arrays of EEG electrodes and MEG sensors), Basic Electronics, Comfortable with building custom laboratory equipment
+\item
+\textbf{Statistical Analysis}: Statistical Parametric Mapping (SPM), SPSS, R, Matlab Statistics Toolbox, Fieldtrip, gTec Analyze, BrainVision Analyzer
+\item
+\textbf{EEG System Experience}: BrainProducts, gTec, Grass Instruments, CTF
 \end{itemize}
 \vspace{2em}
 \SubHeading{Awards}
