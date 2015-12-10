@@ -9,7 +9,7 @@ doc = get_cv_doc('docs/delgrosso_cv')
 def build_section(cv_doc, data, section_name, formatter):
     cv_doc.append(SubHeading(section_name))
     for entry in data[section_name]:
-        entry = defaultdict(str, entry)
+        entry = defaultdict(str, entry) if isinstance(entry, dict) else entry
         cv.append(formatter(entry))
 
 def format_research(entry):
@@ -25,6 +25,19 @@ def format_industry(entry):
                      entry['Institute'],
                      entry['Description']
                     ])
+
+def format_conference_pub(entry):
+    return NewEntry([entry['Date'],
+                     entry['Conference'],
+                     entry['Title'],
+                     entry['Description']
+                    ])
+
+def format_journal_pubs(entry):
+    return Description(entry)
+
+def format_awards(entry):
+    return DescMarg([entry['Date'], entry['Title']])
 
 with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
 
@@ -56,18 +69,10 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
                 build_section(cv, data, 'Industry Experience', format_industry)
 
             elif section == 'Journal Publications':
-                for entry in data[section]:
-                    cv.append(Description(entry))
+                build_section(cv, data, 'Journal Publications', format_journal_pubs)
 
             elif section == 'Conference Publications':
-                for entry in data[section]:
-                    entry = defaultdict(str, entry)
-                    cv.append(NewEntry([
-                        entry['Date'],
-                        entry['Conference'],
-                        entry['Title'],
-                        entry['Description']
-                    ]))
+                build_section(cv, data, 'Conference Publications', format_conference_pub)
 
             elif section == 'Skills':
                 with doc.create(Itemize()) as itemize:
@@ -80,8 +85,7 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
                         itemize.add_item(entry)
 
             elif section == 'Awards':
-                for entry in data[section]:
-                    cv.append(DescMarg([entry['Date'], entry['Title']]))
+                build_section(cv, data, 'Awards', format_awards)
 
             elif section == 'Education':
                 for entry in data[section]:
