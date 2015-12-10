@@ -83,9 +83,6 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
                     cv.append(NewEntry([
                         entry['Date'], entry['Degree'], entry['Institute'], '']))
 
-            # Spacing between sections
-            cv.append(vspace('2em'))
-
     # Add a signature at the bottom
     cv.append(includegraphics(options='width=5cm', arguments='images/Signaturetransparant.png'))
 

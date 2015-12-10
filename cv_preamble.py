@@ -24,7 +24,7 @@ def get_cv_doc(filename):
 
     # Unchanged-ish (Extra line break at the end)
     doc.packages.append(UnsafeCommand('newcommand', r'\SubHeading', options=1,
-                             extra_arguments=r'\vspace{.5em}\noindent\spacedlowsmallcaps{#1}\vspace{0.7em}\\'))
+                             extra_arguments=r'\vspace{1em}\noindent\spacedlowsmallcaps{#1}\vspace{0.7em}\\'))
 
     doc.packages.append(UnsafeCommand('newcommand', r'\Email', options=1,
                              extra_arguments=r'\href{mailto:#1}{#1}'))
