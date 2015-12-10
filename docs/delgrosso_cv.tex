@@ -18,16 +18,20 @@
 \newcommand{\MarginText}[1]{\marginpar{\raggedleft\small#1}}
 \newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}}
 \newcommand{\DescMarg}[2]{\Description{\MarginText{#1} #2}}
-\newcommand{\NewEntry}[4]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#2}}\hspace{1.5em} \MarginText{#1} #3 \vspace{0.5em}\\\Description{#4}}
+\newcommand{\EntryHeader}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#2}}\hspace{1.5em} \MarginText{#1} #3 \vspace{0.5em}}
+\newcommand{\NewEntry}[4]{\EntryHeader{#1}{#2}{#3}\\\Description{#4}}
 \newcommand{\SubHeading}[1]{\vspace{.5em}\noindent\spacedlowsmallcaps{#1}\vspace{0.7em}\\}
 \newcommand{\Email}[1]{\href{mailto:#1}{#1}}
 \thispagestyle{empty}
 \begin{cv}{\spacedallcaps{Nicholas A. Del Grosso}}
 \vspace{2em}
 \SubHeading{Personal Info}
-\NewEntry{Telephone}{+49 170 8253289}{}{}
-\NewEntry{Address}{Karl{-}Witthalm{-}Str. 3, 81375 München, Germany}{}{}
-\NewEntry{E{-}mail}{\Email{delgrosso.nick@gmail.com}}{}{}
+\EntryHeader{}{E{-}mail}{\Email{delgrosso.nick@gmail.com}}
+\\
+\EntryHeader{}{Address}{Karl{-}Witthalm{-}Str. 3, 81375 München}
+\\
+\EntryHeader{}{Telephone}{+49 170 8253289}
+\\
 \vspace{2em}
 \SubHeading{Goals}
 \begin{itemize}
@@ -44,8 +48,8 @@ Build technical skills in a wide variety of fields in order to perform high{-}qu
 \end{itemize}
 \vspace{2em}
 \SubHeading{Education}
-\MarginText{Aug 2012}{M.Sc. Neuroscience}{Max Planck International Research School, Graduate School of Neural and Behavioural Sciences}{}
-\MarginText{May 2010}{B.Sc. Psychology}{Wittenberg University}{}
+\NewEntry{Aug 2012}{M.Sc. Neuroscience}{Max Planck International Research School, Graduate School of Neural and Behavioural Sciences}{}
+\NewEntry{May 2010}{B.Sc. Psychology}{Wittenberg University}{}
 \vspace{2em}
 \SubHeading{Research Experience}
 \NewEntry{May 2013 {-}\\  Present}{Ludwig{-}Maximillians Universität}{Prof. Dr. Anton Sirota}{Programmed a 3D graphics engine in Python to build virtual reality system for freely moving rats, supervised students in programming, engineering, and cognitive science projects, organized weekly journal clubs, and ordered new equipment.}
@@ -80,17 +84,17 @@ Build technical skills in a wide variety of fields in order to perform high{-}qu
 \SubHeading{Skills}
 \begin{itemize}
 \item
-\textbf{EEG System Experience}: BrainProducts, gTec, Grass Instruments, CTF
-\item
-\textbf{Languages}: English (Mother Tongue), German (Level B1), French (Level A1-2)
+\textbf{Stimulus Presentation}: Psychopy, Neurobs Presentation, Psychophysics Toolbox, OpenGL, Pyglet, SuperLab, RatCAVE
 \item
 \textbf{Programming}: Python, Matlab, C-Sharp, GLSL, R, LabView, C, Bash, LaTeX
 \item
+\textbf{Statistical Analysis}: Statistical Parametric Mapping (SPM), SPSS, R, Matlab Statistics Toolbox, Fieldtrip, gTec Analyze, BrainVision Analyzer
+\item
 \textbf{Wet Lab Skills}: Rat Neurosurgery, Animal Behavioral training (rats and monkeys), in vivo electrophysiology (single needle electrodes, chronically-implanted electrode arrays, noninvasive arrays of EEG electrodes and MEG sensors), Basic Electronics, Comfortable with building custom laboratory equipment
 \item
-\textbf{Stimulus Presentation}: Psychopy, Neurobs Presentation, Psychophysics Toolbox, OpenGL, Pyglet, SuperLab, RatCAVE
+\textbf{Languages}: English (Mother Tongue), German (Level B1), French (Level A1-2)
 \item
-\textbf{Statistical Analysis}: Statistical Parametric Mapping (SPM), SPSS, R, Matlab Statistics Toolbox, Fieldtrip, gTec Analyze, BrainVision Analyzer
+\textbf{EEG System Experience}: BrainProducts, gTec, Grass Instruments, CTF
 \item
 \textbf{Graphics}: Blender, Adobe Suite (Photoshop, Illustrator, and InDesign), OpenGL, Google SketchUp, GIMP, Inkspace
 \end{itemize}

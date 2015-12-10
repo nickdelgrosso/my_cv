@@ -26,7 +26,7 @@ doc.append(UnsafeCommand('renewcommand', r'\cvheadingfont', extra_arguments=r'\L
 
 
 # Make New Commands via a metaclass
-for name in ['MarginText', 'NewEntry', 'Description', 'DescMarg', 'SubHeading',
+for name in ['MarginText', 'NewEntry', 'Description', 'DescMarg', 'SubHeading', 'EntryHeader',
              'vspace', 'hspace', 'includegraphics', 'Email']:
     globals()[name] = type(name, (CommandBase,), {'_latex_name': name})
 
@@ -51,8 +51,11 @@ doc.append(UnsafeCommand('newcommand', r'\DescMarg', options=2,
 
 
 ##################
+doc.append(UnsafeCommand('newcommand', r'\EntryHeader', options=3,
+                         extra_arguments=r'\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#2}}\hspace{1.5em} \MarginText{#1} #3 \vspace{0.5em}'))
+
 doc.append(UnsafeCommand('newcommand', r'\NewEntry', options=4,
-        extra_arguments=r'\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#2}}\hspace{1.5em} \MarginText{#1} #3 \vspace{0.5em}\\\Description{#4}'))
+        extra_arguments=r'\EntryHeader{#1}{#2}{#3}\\\Description{#4}'))
 
 
 # Unchanged-ish (Extra line break at the end)
@@ -72,12 +75,17 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
         data = yaml.load(f)
         for section in ['Personal Info', 'Goals', 'Education', 'Research Experience', 'Industry Experience',
                         'Journal Publications', 'Conference Publications', 'Skills', 'Awards']:
+
+            # Section Title
             cv.append(SubHeading(section))
+
+            # Section Data
             if section == 'Personal Info':
                 for key, value in data[section].items():
                     if 'mail' in key:
                         value = Email(value)
-                    cv.append(NewEntry([key, value, '', '']))
+                    cv.append(EntryHeader(['', key, value]))
+                    cv.append(NoEscape(r'\\'))
 
             elif section == 'Research Experience':
                 for entry in data[section]:
@@ -88,6 +96,7 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
                         entry['Supervisor'],
                         entry['Description']
                     ]))
+
             elif section == 'Industry Experience':
                 for entry in data[section]:
                     entry = defaultdict(str, entry)
