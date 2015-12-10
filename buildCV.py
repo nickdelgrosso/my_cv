@@ -19,10 +19,10 @@ doc.packages.append(Package('currvita', options='LabelsAligned'))
 doc.packages.append(Package('hyperref'))
 doc.packages.append(UnsafeCommand('hypersetup', extra_arguments=r'colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon'))
 
-doc.append(UnsafeCommand('newlength', r'\datebox', ))
-doc.append(UnsafeCommand('settowidth', r'\datebox', extra_arguments='Tuebingen, Germany'))
+doc.packages.append(UnsafeCommand('newlength', r'\datebox', ))
+doc.packages.append(UnsafeCommand('settowidth', r'\datebox', extra_arguments='Tuebingen, Germany'))
 
-doc.append(UnsafeCommand('renewcommand', r'\cvheadingfont', extra_arguments=r'\LARGE\color{Maroon}'))
+doc.packages.append(UnsafeCommand('renewcommand', r'\cvheadingfont', extra_arguments=r'\LARGE\color{Maroon}'))
 
 
 # Make New Commands via a metaclass
@@ -40,43 +40,50 @@ class CV(Environment):
 
 
 # Unchanged
-doc.append(UnsafeCommand('newcommand', r'\MarginText', options=1, extra_arguments=r'\marginpar{\raggedleft\small#1}'))
+doc.packages.append(UnsafeCommand('newcommand', r'\MarginText', options=1, extra_arguments=r'\marginpar{\raggedleft\small#1}'))
 
 # Unchanged
-doc.append(UnsafeCommand('newcommand', r'\Description', options=1,
-                         extra_arguments=r'\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}'))
+doc.packages.append(UnsafeCommand('newcommand', r'\Description', options=1,
+                         extra_arguments=r'\hangindent=2em\hangafter=0\footnotesize{#1}\par\normalsize\vspace{1em}'))
 
-doc.append(UnsafeCommand('newcommand', r'\DescMarg', options=2,
+doc.packages.append(UnsafeCommand('newcommand', r'\DescMarg', options=2,
                          extra_arguments=r'\Description{\MarginText{#1} #2}'))
 
 
 ##################
-doc.append(UnsafeCommand('newcommand', r'\EntryHeader', options=3,
+doc.packages.append(UnsafeCommand('newcommand', r'\EntryHeader', options=3,
                          extra_arguments=r'\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#2}}\hspace{1.5em} \MarginText{#1} #3 \vspace{0.5em}'))
 
-doc.append(UnsafeCommand('newcommand', r'\NewEntry', options=4,
+doc.packages.append(UnsafeCommand('newcommand', r'\NewEntry', options=4,
         extra_arguments=r'\EntryHeader{#1}{#2}{#3}\\\Description{#4}'))
 
 
 # Unchanged-ish (Extra line break at the end)
-doc.append(UnsafeCommand('newcommand', r'\SubHeading', options=1,
+doc.packages.append(UnsafeCommand('newcommand', r'\SubHeading', options=1,
                          extra_arguments=r'\vspace{.5em}\noindent\spacedlowsmallcaps{#1}\vspace{0.7em}\\'))
 
-doc.append(UnsafeCommand('newcommand', r'\Email', options=1,
+doc.packages.append(UnsafeCommand('newcommand', r'\Email', options=1,
                          extra_arguments=r'\href{mailto:#1}{#1}'))
+
+
 # Fill Document
 doc.append(UnsafeCommand('thispagestyle', 'empty'))
+doc.append(NoEscape(r'\raggedright'))
+
 with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
 
     # Space between title and the first section
     cv.append(vspace('2em'))
 
     with open('research_experiences.yaml') as f:
+
         data = yaml.load(f)
+
         for section in ['Personal Info', 'Goals', 'Education', 'Research Experience', 'Industry Experience',
                         'Journal Publications', 'Conference Publications', 'Skills', 'Awards']:
 
             # Section Title
+
             cv.append(SubHeading(section))
 
             # Section Data
