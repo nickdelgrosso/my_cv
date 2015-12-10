@@ -19,21 +19,21 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
                 if 'mail' in key:
                     value = Email(value)
                 return HeaderOnly([key, value])
-        build_section(cv, data, 'Personal Info', format_personal)
+        cv.build_section(data, 'Personal Info', format_personal)
 
-        build_section_itemized(cv, data, 'Goals', lambda x: x)
+        cv.build_section_itemized(data, 'Goals', lambda x: x)
 
-        build_section(cv, data, 'Education', lambda x: NewEntry([x['Date'], x['Degree'], x['Institute'], '']))
+        cv.build_section(data, 'Education', lambda x: NewEntry([x['Date'], x['Degree'], x['Institute'], '']))
 
-        build_section(cv, data, 'Research Experience', lambda x: NewEntry([' -\n  '.join([x['StartDate'], x['EndDate']]),
+        cv.build_section(data, 'Research Experience', lambda x: NewEntry([' -\n  '.join([x['StartDate'], x['EndDate']]),
                                                                            x['Institute'], x['Supervisor'], x['Description']]))
 
-        build_section(cv, data, 'Industry Experience', lambda x: NewEntry([' -\n '.join(x['StartDate', x['EndDate']]),
+        cv.build_section(data, 'Industry Experience', lambda x: NewEntry([' -\n '.join(x['StartDate', x['EndDate']]),
                                                                            x['Position'], x['Institute'], x['Description']]))
 
-        build_section(cv, data, 'Journal Publications', lambda x: Description(x))
+        cv.build_section(data, 'Journal Publications', lambda x: Description(x))
 
-        build_section(cv, data, 'Conference Publications', lambda x: NewEntry([x['Date'], x['Conference'],
+        cv.build_section(data, 'Conference Publications', lambda x: NewEntry([x['Date'], x['Conference'],
                                                                                x['Title'], x['Description']]))
 
         # def format_skill_item(entry):
@@ -42,7 +42,7 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
         #     return bold(''.join(entry.keys())) + NoEscape(': ') + NoEscape(', '.join(entry.values()))
         # build_section_itemized(cv, data, 'Skills', format_skill_item)
 
-        build_section(cv, data, 'Awards', lambda x: DescMarg([x['Date'], x['Title']]))
+        cv.build_section(data, 'Awards', lambda x: DescMarg([x['Date'], x['Title']]))
 
     # Add a signature at the bottom
     cv.append(includegraphics(options='width=5cm', arguments='images/Signaturetransparant.png'))

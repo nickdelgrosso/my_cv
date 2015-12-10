@@ -4,17 +4,6 @@ from pylatex.base_classes import CommandBase, Arguments
 from pylatex.utils import italic, NoEscape, bold
 from pylatex.document import Environment
 
-def build_section(cv_doc, data, section_name, formatter):
-    cv_doc.append(SubHeading(section_name))
-    for entry in data[section_name]:
-        entry = defaultdict(str, entry) if isinstance(entry, dict) else entry
-        cv_doc.append(formatter(entry))
-
-def build_section_itemized(cv_doc, data, section_name, item_formatter):
-    cv_doc.append(SubHeading(section_name))
-    for entry in data[section_name]:
-        with cv_doc.create(Itemize()) as itemize:
-            itemize.add_item(item_formatter(entry))
 
 def get_cv_doc(filename):
     """Returns a pylatex.Document instance pre-loaded with everything needed for my cv style."""
@@ -82,3 +71,15 @@ class CV(Environment):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.arguments = UnsafeCommand('spacedallcaps', self.arguments)
+
+    def build_section_itemized(self, data, section_name, item_formatter):
+        self.append(SubHeading(section_name))
+        for entry in data[section_name]:
+            with self.create(Itemize()) as itemize:
+                itemize.add_item(item_formatter(entry))
+
+    def build_section(self, data, section_name, formatter):
+        self.append(SubHeading(section_name))
+        for entry in data[section_name]:
+            entry = defaultdict(str, entry) if isinstance(entry, dict) else entry
+            self.append(formatter(entry))
