@@ -38,6 +38,12 @@ class CV(Environment):
         self.arguments = UnsafeCommand('spacedallcaps', self.arguments)
 
 
+# Unchanged-ish (Extra line break at the end)
+doc.packages.append(UnsafeCommand('newcommand', r'\SubHeading', options=1,
+                         extra_arguments=r'\vspace{.5em}\noindent\spacedlowsmallcaps{#1}\vspace{0.7em}\\'))
+
+doc.packages.append(UnsafeCommand('newcommand', r'\Email', options=1,
+                         extra_arguments=r'\href{mailto:#1}{#1}'))
 
 # Unchanged
 doc.packages.append(UnsafeCommand('newcommand', r'\MarginText', options=1, extra_arguments=r'\marginpar{\raggedleft\small#1}'))
@@ -58,12 +64,6 @@ doc.packages.append(UnsafeCommand('newcommand', r'\NewEntry', options=4,
         extra_arguments=r'\EntryHeader{#1}{#2}{#3}\\\Description{#4}'))
 
 
-# Unchanged-ish (Extra line break at the end)
-doc.packages.append(UnsafeCommand('newcommand', r'\SubHeading', options=1,
-                         extra_arguments=r'\vspace{.5em}\noindent\spacedlowsmallcaps{#1}\vspace{0.7em}\\'))
-
-doc.packages.append(UnsafeCommand('newcommand', r'\Email', options=1,
-                         extra_arguments=r'\href{mailto:#1}{#1}'))
 
 
 # Fill Document
