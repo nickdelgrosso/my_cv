@@ -19,7 +19,12 @@ doc.packages.append(Package('currvita', options='LabelsAligned'))
 doc.packages.append(Package('hyperref'))
 doc.packages.append(UnsafeCommand('hypersetup', extra_arguments=r'colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon'))
 
-#
+doc.append(UnsafeCommand('newlength', r'\datebox', ))
+doc.append(UnsafeCommand('settowidth', r'\datebox', extra_arguments='Tuebingen, Germany'))
+
+doc.append(UnsafeCommand('renewcommand', r'\cvheadingfont', extra_arguments=r'\LARGE\color{Maroon}'))
+
+
 # Make New Commands via a metaclass
 for name in ['MarginText', 'NewEntry', 'Description', 'DescMarg', 'SubHeading',
              'vspace', 'hspace', 'includegraphics', 'Email']:
@@ -32,22 +37,25 @@ class CV(Environment):
         super().__init__(*args, **kwargs)
         self.arguments = UnsafeCommand('spacedallcaps', self.arguments)
 
-doc.append(UnsafeCommand('newlength', r'\datebox', ))
-doc.append(UnsafeCommand('settowidth', r'\datebox', extra_arguments='Tuebingen, Germany'))
 
-doc.append(UnsafeCommand('renewcommand', r'\cvheadingfont', extra_arguments=r'\LARGE\color{Maroon}'))
 
+# Unchanged
 doc.append(UnsafeCommand('newcommand', r'\MarginText', options=1, extra_arguments=r'\marginpar{\raggedleft\small#1}'))
 
+# Unchanged
 doc.append(UnsafeCommand('newcommand', r'\Description', options=1,
                          extra_arguments=r'\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}'))
 
 doc.append(UnsafeCommand('newcommand', r'\DescMarg', options=2,
-                         extra_arguments=r'\MarginText{#1} \Description{#2}'))
+                         extra_arguments=r'\Description{\MarginText{#1} #2}'))
 
+
+##################
 doc.append(UnsafeCommand('newcommand', r'\NewEntry', options=4,
-        extra_arguments=r'\MarginText{#1}\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#2}}\hspace{1.5em} #3 \vspace{0.5em}\\\Description{#4}'))
+        extra_arguments=r'\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#2}}\hspace{1.5em} \MarginText{#1} #3 \vspace{0.5em}\\\Description{#4}'))
 
+
+# Unchanged-ish (Extra line break at the end)
 doc.append(UnsafeCommand('newcommand', r'\SubHeading', options=1,
                          extra_arguments=r'\vspace{.5em}\noindent\spacedlowsmallcaps{#1}\vspace{0.7em}\\'))
 

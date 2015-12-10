@@ -17,16 +17,16 @@
 \renewcommand{\cvheadingfont}{\LARGE\color{Maroon}}
 \newcommand{\MarginText}[1]{\marginpar{\raggedleft\small#1}}
 \newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}}
-\newcommand{\DescMarg}[2]{\MarginText{#1} \Description{#2}}
-\newcommand{\NewEntry}[4]{\MarginText{#1}\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#2}}\hspace{1.5em} #3 \vspace{0.5em}\\\Description{#4}}
+\newcommand{\DescMarg}[2]{\Description{\MarginText{#1} #2}}
+\newcommand{\NewEntry}[4]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#2}}\hspace{1.5em} \MarginText{#1} #3 \vspace{0.5em}\\\Description{#4}}
 \newcommand{\SubHeading}[1]{\vspace{.5em}\noindent\spacedlowsmallcaps{#1}\vspace{0.7em}\\}
 \newcommand{\Email}[1]{\href{mailto:#1}{#1}}
 \thispagestyle{empty}
 \begin{cv}{\spacedallcaps{Nicholas A. Del Grosso}}
 \vspace{2em}
 \SubHeading{Personal Info}
-\NewEntry{Address}{Karl{-}Witthalm{-}Str. 3, 81375 München, Germany}{}{}
 \NewEntry{Telephone}{+49 170 8253289}{}{}
+\NewEntry{Address}{Karl{-}Witthalm{-}Str. 3, 81375 München, Germany}{}{}
 \NewEntry{E{-}mail}{\Email{delgrosso.nick@gmail.com}}{}{}
 \vspace{2em}
 \SubHeading{Goals}
@@ -80,19 +80,19 @@ Build technical skills in a wide variety of fields in order to perform high{-}qu
 \SubHeading{Skills}
 \begin{itemize}
 \item
-\textbf{Programming}: Python, Matlab, C-Sharp, GLSL, R, LabView, C, Bash, LaTeX
-\item
-\textbf{Graphics}: Blender, Adobe Suite (Photoshop, Illustrator, and InDesign), OpenGL, Google SketchUp, GIMP, Inkspace
+\textbf{EEG System Experience}: BrainProducts, gTec, Grass Instruments, CTF
 \item
 \textbf{Languages}: English (Mother Tongue), German (Level B1), French (Level A1-2)
 \item
-\textbf{Statistical Analysis}: Statistical Parametric Mapping (SPM), SPSS, R, Matlab Statistics Toolbox, Fieldtrip, gTec Analyze, BrainVision Analyzer
+\textbf{Programming}: Python, Matlab, C-Sharp, GLSL, R, LabView, C, Bash, LaTeX
 \item
 \textbf{Wet Lab Skills}: Rat Neurosurgery, Animal Behavioral training (rats and monkeys), in vivo electrophysiology (single needle electrodes, chronically-implanted electrode arrays, noninvasive arrays of EEG electrodes and MEG sensors), Basic Electronics, Comfortable with building custom laboratory equipment
 \item
 \textbf{Stimulus Presentation}: Psychopy, Neurobs Presentation, Psychophysics Toolbox, OpenGL, Pyglet, SuperLab, RatCAVE
 \item
-\textbf{EEG System Experience}: BrainProducts, gTec, Grass Instruments, CTF
+\textbf{Statistical Analysis}: Statistical Parametric Mapping (SPM), SPSS, R, Matlab Statistics Toolbox, Fieldtrip, gTec Analyze, BrainVision Analyzer
+\item
+\textbf{Graphics}: Blender, Adobe Suite (Photoshop, Illustrator, and InDesign), OpenGL, Google SketchUp, GIMP, Inkspace
 \end{itemize}
 \vspace{2em}
 \SubHeading{Awards}
