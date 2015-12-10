@@ -3,9 +3,9 @@ from pylatex.base_classes import CommandBase, Arguments
 from pylatex.utils import italic, NoEscape, bold
 from pylatex.document import Environment
 
-def get_cv_doc():
+def get_cv_doc(filename):
     """Returns a pylatex.Document instance pre-loaded with everything needed for my cv style."""
-    doc = Document('docs/delgrosso_cv',
+    doc = Document(filename,
                    documentclass='article')
 
     # Set Packages
