@@ -39,6 +39,9 @@ def format_journal_pubs(entry):
 def format_awards(entry):
     return DescMarg([entry['Date'], entry['Title']])
 
+def format_education(entry):
+    return NewEntry([entry['Date'], entry['Degree'], entry['Institute'], ''])
+
 with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
 
     # Space between title and the first section
@@ -87,9 +90,7 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
                 build_section(cv, data, 'Awards', format_awards)
 
             elif section == 'Education':
-                for entry in data[section]:
-                    cv.append(NewEntry([
-                        entry['Date'], entry['Degree'], entry['Institute'], '']))
+                build_section(cv, data, 'Education', format_education)
 
     # Add a signature at the bottom
     cv.append(includegraphics(options='width=5cm', arguments='images/Signaturetransparant.png'))
