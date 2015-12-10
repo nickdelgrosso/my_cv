@@ -4,7 +4,7 @@ import yaml
 from collections import defaultdict
 from cv_preamble import *
 
-doc = get_cv_doc()
+doc = get_cv_doc('docs/delgrosso_cv')
 
 with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
 
