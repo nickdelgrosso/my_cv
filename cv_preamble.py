@@ -4,6 +4,8 @@ from pylatex.base_classes import CommandBase, Arguments
 from pylatex.utils import italic, NoEscape, bold
 from pylatex.document import Environment
 
+from dateutil import parser as dateparser
+from datetime import datetime
 
 def get_cv_doc(filename):
     """Returns a pylatex.Document instance pre-loaded with everything needed for my cv style."""
@@ -80,8 +82,25 @@ class CV(Environment):
             with self.create(Itemize()) as itemize:
                 itemize.add_item(item_formatter(entry))
 
-    def build_section(self, section_name, formatter):
+    def build_section(self, section_name, formatter, datefilter=None, datefield=''):
         self.append(SubHeading(section_name))
         for entry in self.cvdata[section_name]:
-            entry = defaultdict(str, entry) if isinstance(entry, dict) else entry
+            if isinstance(entry, dict):
+                entry = defaultdict(str, entry)
+                if datefilter:
+                    assert isinstance(datefilter, datetime), "datefilter must be a datetime or timedelta object"
+                    if datefield in entry:
+                        try:
+                            entry_date = dateparser.parse(entry[datefield])
+                        except ValueError:
+                            if isinstance(entry[datefield], str) and entry[datefield].lower() in ['today', 'present', 'now', 'current']:
+                                entry_date = datetime.now()
+                            else:
+                                print('Warning: Could not dateparse entry date: {}.  This entry will be automatically rejected.'.format(entry[datefield]))
+                            continue
+                        # Reject dates before the datefilter date.
+                        if isinstance(datefilter, datetime):
+                            if entry_date < datefilter:
+                                continue
+
             self.append(formatter(entry))
