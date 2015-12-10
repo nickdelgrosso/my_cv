@@ -19,7 +19,7 @@ def build_section_itemized(cv_doc, data, section_name, item_formatter):
             itemize.add_item(item_formatter(entry))
 
 def format_skill_item(entry):
-    return bold(entry) + NoEscape(': ') + NoEscape(', '.join(data[section][entry]))
+    return bold(entry) + NoEscape(': ') + NoEscape(', '.join(entry.values()))
 
 def format_goals_item(entry):
     return entry
@@ -69,36 +69,15 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
 
         data = yaml.load(f)
 
-        for section in ['Personal Info', 'Goals', 'Education', 'Research Experience', 'Industry Experience',
-                        'Journal Publications', 'Conference Publications', 'Skills', 'Awards']:
-
-            # Section Data
-            if section == 'Personal Info':
-                build_section(cv, data, 'Personal Info', format_personal)
-
-            elif section == 'Research Experience':
-                build_section(cv, data, 'Research Experience', format_research)
-
-            elif section == 'Industry Experience':
-                build_section(cv, data, 'Industry Experience', format_industry)
-
-            elif section == 'Journal Publications':
-                build_section(cv, data, 'Journal Publications', format_journal_pubs)
-
-            elif section == 'Conference Publications':
-                build_section(cv, data, 'Conference Publications', format_conference_pub)
-
-            elif section == 'Skills':
-                build_section_itemized(cv, data, 'Skills', format_skill_item)
-
-            elif section == 'Goals':
-                build_section_itemized(cv, data, 'Goals', format_goals_item)
-
-            elif section == 'Awards':
-                build_section(cv, data, 'Awards', format_awards)
-
-            elif section == 'Education':
-                build_section(cv, data, 'Education', format_education)
+        build_section(cv, data, 'Personal Info', format_personal)
+        build_section_itemized(cv, data, 'Goals', format_goals_item)
+        build_section(cv, data, 'Education', format_education)
+        build_section(cv, data, 'Research Experience', format_research)
+        build_section(cv, data, 'Industry Experience', format_industry)
+        build_section(cv, data, 'Journal Publications', format_journal_pubs)
+        build_section(cv, data, 'Conference Publications', format_conference_pub)
+        # build_section_itemized(cv, data, 'Skills', format_skill_item)
+        build_section(cv, data, 'Awards', format_awards)
 
     # Add a signature at the bottom
     cv.append(includegraphics(options='width=5cm', arguments='images/Signaturetransparant.png'))
