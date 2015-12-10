@@ -12,6 +12,18 @@ def build_section(cv_doc, data, section_name, formatter):
         entry = defaultdict(str, entry) if isinstance(entry, dict) else entry
         cv.append(formatter(entry))
 
+def build_section_itemized(cv_doc, data, section_name, item_formatter):
+    cv_doc.append(SubHeading(section_name))
+    for entry in data[section_name]:
+        with doc.create(Itemize()) as itemize:
+            itemize.add_item(item_formatter(entry))
+
+def format_skill_item(entry):
+    return bold(entry) + NoEscape(': ') + NoEscape(', '.join(data[section][entry]))
+
+def format_goals_item(entry):
+    return entry
+
 def format_research(entry):
     return NewEntry([' -\n  '.join([entry['StartDate'], entry['EndDate']]),
                      entry['Institute'],
@@ -60,9 +72,6 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
         for section in ['Personal Info', 'Goals', 'Education', 'Research Experience', 'Industry Experience',
                         'Journal Publications', 'Conference Publications', 'Skills', 'Awards']:
 
-            # Section Title
-            cv.append(SubHeading(section))
-
             # Section Data
             if section == 'Personal Info':
                 build_section(cv, data, 'Personal Info', format_personal)
@@ -80,14 +89,10 @@ with doc.create(CV(arguments='Nicholas A. Del Grosso')) as cv:
                 build_section(cv, data, 'Conference Publications', format_conference_pub)
 
             elif section == 'Skills':
-                with doc.create(Itemize()) as itemize:
-                    for entry in data[section]:
-                        itemize.add_item(bold(entry) + NoEscape(': ') + NoEscape(', '.join(data[section][entry])))
+                build_section_itemized(cv, data, 'Skills', format_skill_item)
 
             elif section == 'Goals':
-                for entry in data[section]:
-                    with doc.create(Itemize()) as itemize:
-                        itemize.add_item(entry)
+                build_section_itemized(cv, data, 'Goals', format_goals_item)
 
             elif section == 'Awards':
                 build_section(cv, data, 'Awards', format_awards)
