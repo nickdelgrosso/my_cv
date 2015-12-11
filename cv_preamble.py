@@ -77,11 +77,13 @@ class CV(Environment):
         self.arguments = UnsafeCommand('spacedallcaps', self.arguments)
         self.append(vspace('2em')) # Space between title and the first section
 
-    def build_section_itemized(self, section_name, item_formatter):
+    def build_section_itemized(self, section_name, formatter, limit=None):
         self.append(SubHeading(section_name))
-        for entry in self.cvdata[section_name]:
+        for idx, entry in enumerate(self.cvdata[section_name]):
+            if limit and idx + 1 > limit:
+                break
             with self.create(Itemize()) as itemize:
-                itemize.add_item(item_formatter(entry))
+                itemize.add_item(formatter(entry))
 
     def build_section(self, section_name, formatter, filter=None, limit=None):
         if filter:
@@ -89,7 +91,7 @@ class CV(Environment):
         self.append(SubHeading(section_name))
 
         for idx, entry in enumerate(self.cvdata[section_name]):
-            if limit and idx+1 > limit:
+            if limit and idx + 1 > limit:
                 break
             if isinstance(entry, dict):
                 entry = defaultdict(str, entry)
