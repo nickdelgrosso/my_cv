@@ -119,7 +119,10 @@ def dateparse_str(value):
     """Returns a datetime object from a string, using a modified version of the dateutil parser"""
     if isinstance(value, datetime):
         return value
-    if value.lower() in ['today', 'present', 'now', 'current']:
-        return datetime.now()
+    if isinstance(value, str):
+        if value.lower() in ['today', 'present', 'now', 'current']:
+            return datetime.now()
+        else:
+            return dateparser.parse(value)
     else:
-        return dateparser.parse(value)
+        raise ValueError("Date must be either a datetime or string object.")

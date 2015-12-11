@@ -21,6 +21,19 @@ class TestDateParser(unittest.TestCase):
             self.assertRaises(ValueError, cv_preamble.dateparse_str, 'Not a Date')
             self.assertRaises(ValueError, cv_preamble.dateparse_str, 'Aug 12 - May 2015')
 
+    def test_int_input(self):
+        self.assertRaises(ValueError, cv_preamble.dateparse_str, 1)
+        self.assertRaises(ValueError, cv_preamble.dateparse_str, 10)
+        self.assertRaises(ValueError, cv_preamble.dateparse_str, 100)
+        self.assertRaises(ValueError, cv_preamble.dateparse_str, 1000)
+
+    def test_float_input(self):
+        self.assertRaises(ValueError, cv_preamble.dateparse_str, 1.)
+        self.assertRaises(ValueError, cv_preamble.dateparse_str, 10.)
+        self.assertRaises(ValueError, cv_preamble.dateparse_str, 30.)
+        self.assertRaises(ValueError, cv_preamble.dateparse_str, 300.)
+
+
 
 if __name__ == '__main__':
     unittest.main()
