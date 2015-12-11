@@ -83,40 +83,32 @@ class CV(Environment):
             with self.create(Itemize()) as itemize:
                 itemize.add_item(item_formatter(entry))
 
-    def build_section(self, section_name, formatter, datefilter=None, datefield=''):
+    def build_section(self, section_name, formatter, filter=None):
+        if filter:
+            next(filter)
         self.append(SubHeading(section_name))
+
         for entry in self.cvdata[section_name]:
             if isinstance(entry, dict):
                 entry = defaultdict(str, entry)
-                if datefilter:
-                    assert isinstance(datefilter, datetime), "datefilter must be a datetime or timedelta object"
-                    if datefield in entry:
-                        try:
-                            entry_date = dateparser.parse(entry[datefield])
-                        except ValueError:
-                            if isinstance(entry[datefield], str) and entry[datefield].lower() in ['today', 'present', 'now', 'current']:
-                                entry_date = datetime.now()
-                            else:
-                                print('Warning: Could not dateparse entry date: {}.  This entry will be automatically rejected.'.format(entry[datefield]))
-                            continue
-                        # Reject dates before the datefilter date.
-                        if isinstance(datefilter, datetime):
-                            if entry_date < datefilter:
-                                continue
-
+                if filter and not filter.send(entry):
+                    continue
             self.append(formatter(entry))
 
 
-def datefilter(entry, field, filter_date):
+def datefilter(field, filter_date):
     """Returns True if filter is passed, False if not."""
     filter_date = dateparse_str(filter_date) if isinstance(filter_date, str) else filter_date
     assert isinstance(filter_date, datetime), "filter_date not recognized as a date."
-    try:
-        entry_date = dateparse_str(entry[field])
-        return entry_date > filter_date
-    except ValueError:
-        warnings.warn('entry_date, "{}", not recognized.  Rejecting this entry.'.format(entry_date))
-        return False
+    entry = yield
+    while True:
+        try:
+            entry_date = dateparse_str(entry[field])
+            passes_fliter = entry_date > filter_date
+        except ValueError:
+            warnings.warn('entry_date, "{}", not recognized.  Rejecting this entry.'.format(entry_date))
+            passes_fliter = False
+        entry = yield passes_fliter
 
 
 def dateparse_str(value):
@@ -125,5 +117,3 @@ def dateparse_str(value):
         return datetime.now()
     else:
         return dateparser.parse(value)
-
-
