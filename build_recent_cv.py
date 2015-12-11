@@ -48,7 +48,7 @@ with doc.create(CV(data, arguments='Nicholas A. Del Grosso')) as cv:
         return bold(NoEscape(key)) + NoEscape(': {}'.format(', '.join(value)))
     cv.build_section_itemized('Skills', format_skill_item)
 
-    cv.build_section('Awards', lambda x: DescMarg([x['Date'], x['Title']]), limit=2)
+    cv.build_section('Awards', lambda x: DescMarg([x['Date'], x['Title']]))
 
     # Add a signature at the bottom
     cv.append('Full List of Positions and Publications Available Upon Request.')
