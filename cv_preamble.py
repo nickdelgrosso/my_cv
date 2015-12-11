@@ -6,6 +6,7 @@ from pylatex.document import Environment
 
 from dateutil import parser as dateparser
 from datetime import datetime
+import warnings
 
 def get_cv_doc(filename):
     """Returns a pylatex.Document instance pre-loaded with everything needed for my cv style."""
@@ -104,3 +105,25 @@ class CV(Environment):
                                 continue
 
             self.append(formatter(entry))
+
+
+def datefilter(entry, field, filter_date):
+    """Returns True if filter is passed, False if not."""
+    filter_date = dateparse_str(filter_date) if isinstance(filter_date, str) else filter_date
+    assert isinstance(filter_date, datetime), "filter_date not recognized as a date."
+    try:
+        entry_date = dateparse_str(entry[field])
+        return entry_date > filter_date
+    except ValueError:
+        warnings.warn('entry_date, "{}", not recognized.  Rejecting this entry.'.format(entry_date))
+        return False
+
+
+def dateparse_str(value):
+    """Returns a datetime object from a string, using a modified version of the dateutil parser"""
+    if entry[datefield].lower() in ['today', 'present', 'now', 'current']:
+        return datetime.now()
+    else:
+        return dateparser.parse(value)
+
+
