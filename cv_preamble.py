@@ -104,16 +104,18 @@ def datefilter(field, filter_date):
     while True:
         try:
             entry_date = dateparse_str(entry[field])
-            passes_fliter = entry_date > filter_date
+            passes_filter = entry_date > filter_date
         except ValueError:
-            warnings.warn('entry_date, "{}", not recognized.  Rejecting this entry.'.format(entry_date))
-            passes_fliter = False
-        entry = yield passes_fliter
+            warnings.warn('entry date, "{}", not recognized.  Rejecting this entry.'.format(entry[field]))
+            passes_filter = False
+        entry = yield passes_filter
 
 
 def dateparse_str(value):
     """Returns a datetime object from a string, using a modified version of the dateutil parser"""
-    if entry[datefield].lower() in ['today', 'present', 'now', 'current']:
+    if isinstance(value, datetime):
+        return value
+    if value.lower() in ['today', 'present', 'now', 'current']:
         return datetime.now()
     else:
         return dateparser.parse(value)

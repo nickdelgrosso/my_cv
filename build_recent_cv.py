@@ -29,7 +29,7 @@ with doc.create(CV(data, arguments='Nicholas A. Del Grosso')) as cv:
     # Research Experience: Last four years' worth
     cv.build_section('Research Experience', lambda x: NewEntry([' -\n  '.join([x['StartDate'], x['EndDate']]),
                                                                        x['Institute'], x['Supervisor'], x['Description']]),
-                     datefield='EndDate', datefilter=datetime.now() - timedelta(days=365*4))
+                     filter=datefilter('EndDate', datetime.now() - timedelta(days=365*4)))
 
     cv.build_section('Industry Experience', lambda x: NewEntry([' -\n '.join(x['StartDate', x['EndDate']]),
                                                                        x['Position'], x['Institute'], x['Description']]))
@@ -39,7 +39,7 @@ with doc.create(CV(data, arguments='Nicholas A. Del Grosso')) as cv:
     # Conferences: Last four years' worth
     cv.build_section('Conference Publications', lambda x: NewEntry([x['Date'], x['Conference'],
                                                                            x['Title'], x['Description']]),
-                     datefield='Date', datefilter=datetime.now()-timedelta(days=365*4))
+                     filter=datefilter('Date', 'Jan 2011'))
 
     def format_skill_item(entry):
         key = list(entry)[0]
