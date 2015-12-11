@@ -93,12 +93,25 @@ Industry Experience:
       Name: Dr. Kai-Markus Müller
       Email: km.mueller@neuromarketing-labs.com
 
+Teaching Experience:
+  - Position: Teaching Assistant
+    Course Name: Psychophysics
+    Date: December 2015
+    Description: In this 2-week block course, I provided technical and programming assistance to students programming and analysing their own psychopysics experiments in Matlab, R, and Excel.
+  - Position: Lecturer
+    Course Name: Introduction to Matlab
+    Date: Winter 2015
+    Description: I planned and taught Matlab to beginning proramming students.
+    Evaluation Grade: Excellent
 
 Journal Publications:
   - Broetz D., Del Grosso, N.A., Rea M., Ramos-Murguialday, A., Soekadar S.R., Birbaumer, N. ``A New Hand Assessment Instrument for Severely Affected Stroke Patients.''  Journal of Neurorehabilitation. 2014; 34(3), 409-27.
   - Benoit, J.B., Del Grosso, N.A., Yoder, J.A., Denlinger, D.L. ``Resistance to Dehydration between Bouts of Blood Feeding in the Bed Bug, Cimex Lectularius, is Enhanced by Water Conservation, Aggregation, and Quiescence.'' American Journal of Tropical Medical Hygience. May 2007; 76(5), 987-93.
 
 Conference Publications:
+  - Conference: Synergy Munich
+    Date: June 2015
+    Title: ratCAVE, A Novel Virtual Reality System for Freely-Moving Rodents
   - Conference: Interact Munich
     Date: March 2015
     Title: Demonstrating a Freely-Moving Virtual Reality Approach for Rodent Research
@@ -141,7 +154,7 @@ Skills:
     - R
     - LabView
     - C
-    - Bash
+    - Bash/Linux
     - LaTeX
   - Stimulus Presentation:
     - Psychopy

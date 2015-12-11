@@ -18,8 +18,11 @@ class TestDateParser(unittest.TestCase):
         self.assertEqual(value_in, value)
 
     def test_nondate_string_input(self):
-            self.assertRaises(ValueError, cv_preamble.dateparse_str, 'Not a Date')
-            self.assertRaises(ValueError, cv_preamble.dateparse_str, 'Aug 12 - May 2015')
+        self.assertRaises(ValueError, cv_preamble.dateparse_str, 'Not a Date')
+        self.assertRaises(ValueError, cv_preamble.dateparse_str, 'Aug 12 - May 2015')
+
+    def test_season_input(self):
+        self.assertEqual(cv_preamble.dateparse_str('Winter 2015').month, 1)
 
     def test_int_input(self):
         self.assertRaises(ValueError, cv_preamble.dateparse_str, 1)

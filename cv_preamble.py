@@ -123,6 +123,10 @@ def dateparse_str(value):
         if value.lower() in ['today', 'present', 'now', 'current']:
             return datetime.now()
         else:
-            return dateparser.parse(value)
+            for season, month in [('fall', 'October'), ('Autumn', 'October'), ('winter', 'January'), ('summer', 'June'), ('spring', 'April')]:
+                if season.lower() in value.lower():
+                    return dateparser.parse(value.lower().replace(season, month))
+            else:
+                return dateparser.parse(value)
     else:
         raise ValueError("Date must be either a datetime or string object.")
