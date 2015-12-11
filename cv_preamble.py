@@ -83,12 +83,14 @@ class CV(Environment):
             with self.create(Itemize()) as itemize:
                 itemize.add_item(item_formatter(entry))
 
-    def build_section(self, section_name, formatter, filter=None):
+    def build_section(self, section_name, formatter, filter=None, limit=None):
         if filter:
             next(filter)
         self.append(SubHeading(section_name))
 
-        for entry in self.cvdata[section_name]:
+        for idx, entry in enumerate(self.cvdata[section_name]):
+            if limit and idx+1 > limit:
+                break
             if isinstance(entry, dict):
                 entry = defaultdict(str, entry)
                 if filter and not filter.send(entry):

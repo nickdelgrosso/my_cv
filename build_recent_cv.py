@@ -32,7 +32,8 @@ with doc.create(CV(data, arguments='Nicholas A. Del Grosso')) as cv:
                      filter=datefilter('EndDate', datetime.now() - timedelta(days=365*4)))
 
     cv.build_section('Industry Experience', lambda x: NewEntry([' -\n '.join(x['StartDate', x['EndDate']]),
-                                                                       x['Position'], x['Institute'], x['Description']]))
+                                                                       x['Position'], x['Institute'], x['Description']]),
+                     limit=1)
 
     cv.build_section('Journal Publications', lambda x: Description(x))
 
