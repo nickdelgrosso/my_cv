@@ -20,6 +20,7 @@ with doc.create(CV(data, arguments='Nicholas A. Del Grosso')) as cv:
             if 'mail' in key:
                 value = Email(value)
             return HeaderOnly([key, value])
+
     cv.build_section('Personal Info', format_personal)
 
     cv.build_section_itemized('Goals', lambda x: x)
@@ -27,7 +28,7 @@ with doc.create(CV(data, arguments='Nicholas A. Del Grosso')) as cv:
     cv.build_section('Education', lambda x: NewEntry([x['Date'], x['Degree'], x['Institute'], '']))
 
     # Research Experience: Last four years' worth
-    cv.build_section('Teaching Experience', lambda x: NewEntry([x['Date'], x['Position'], x['Course Name'], x['Description']]))
+    cv.build_section('Teaching Experience', lambda x: NewEntry([x['Date'], x['Position'], x['Course Name'], x['Description']]), reverse=True)
 
     cv.build_section('Research Experience', lambda x: NewEntry([' -\n  '.join([x['StartDate'], x['EndDate']]),
                                                                        x['Institute'], x['Supervisor'], x['Description']]),
