@@ -2,29 +2,61 @@
 Personal Info:
   - Address: Karl-Witthalm-Str. 3, 81375 München
   - Telephone: +49 170 8253289
-  - E-mail: delgrosso.nick@gmail.com
+  # - E-mail: delgrosso.nick@gmail.com
+  - E-mail: delgrosso@bio.lmu.de
 
 Goals:
-  - Obtain a PhD in cognitive neuroscience by studying multimodal sensory integration and sensorimotor interactions.
-  - Obtain teaching, project management, and laboratory experience sufficient to one day become a competent university professor.
-  - Build technical skills in a wide variety of fields in order to perform high-quality research at institutes with limited resources.
+  - To continually improve my teaching, project management skills
+  - To provide laboratory experiences and an outstanding science education.
+  - To inspire, motivate students through science and critical thinking.
+  - To empower individuals by developing, and teaching open-source software and tools.
 
 Education:
-  - Degree: M.Sc. Neuroscience
-    Date: Aug 2012
+  - Degree: PhD. Cognitive Neuroscience
+    Date: Oct 2014 - Present
+    StartDate: Oct 2014
+    EndDate: Present
+    Completed: False
+    Institute: Lüdwig-Maximillians Üniversität
+    Location: Munich, Germany
+  - Degree: PhD. Cognitive Neuroscience
+    Date: Aug 2012 - Oct 2014
+    StartDate: Aug 2012
+    EndDate: Oct 2014
+    Completed: False
     Institute: Max Planck International Research School, Graduate School of Neural and Behavioural Sciences
     Location: Tübingen, Germany
+  - Degree: M.Sc. Neuroscience
+    Date: Aug 2012
+    StartDate: September 2010
+    EndDate: Aug 2012
+    Institute: Max Planck International Research School, Graduate School of Neural and Behavioural Sciences
+    Location: Tübingen, Germany
+    Completed: True
   - Degree: B.Sc. Psychology
     Date: May 2010
+    StartDate: August 2006
+    EndDate: May 2010
     Institute: Wittenberg University
     Location: Springfield, Ohio
+    Completed: True
 
 Research Experience:
   - Institute: Ludwig-Maximillians Universität
     Supervisor: Prof. Dr. Anton Sirota
     StartDate: May 2013
     EndDate: Present
-    Description: Programmed a 3D graphics engine in Python to build virtual reality system for freely moving rats, supervised students in programming, engineering, and cognitive science projects, organized weekly journal clubs, and ordered new equipment.
+    Description: Programmed a 3D graphics engine in Python to build virtual reality system for freely moving rats, supervised students in programming, engineering, and cognitive science projects, organized weekly journal clubs, and ordered new equipment, trained rodents to perform behavioral tasks, and performed surgery on said rodents as part of brain research.
+    Responsibilities: 
+      - Programmed a 3D graphics engine in Python
+      - Designed and Built a Novel Virtual Reality System
+      - Supervised Five Students in Engineering, Cognitive Science, and Programming projects lasting 3-12 months
+      - Organized weekly lab meetings
+      - Ordered Laboratory Equipment
+      - Programmed an Interface to the lab's 3D Optical Tracking system.
+      - Performed Market Research 
+      - Performed Animal Training
+      - Performed Rodent Brain Surgery
     Reference:
       Name: Prof. Dr. Anton Sirota
       Email: anton.sirota@cin.uni-tuebiungen.de
@@ -33,6 +65,12 @@ Research Experience:
     StartDate: Aug 2012
     EndDate: May 2013
     Description: Wrote a research grant to study the top-down and bottom-up interactions by computational modeling information propagation in early sensory pathways as measured by MEG, designed and administrated an institute wiki, organized a student lecture series, and supervised two students’ EEG research projects.
+    Responsibilities:
+      - Wrote a research grant 
+      - Collected MEG, EEG, and EMG data.
+      - Designed and Administrated an Wiki for the Research Institute
+      - Organized a Seminar
+      - Supervised Two Students’ EEG Research Projects
     Reference:
       Name: *supChrist
       Email: christoph.braun@uni-tuebingen.de
@@ -41,6 +79,9 @@ Research Experience:
     StartDate: Nov 2011
     EndDate: July 2012
     Description: Programmed in Matlab a time-frequency and evoked potential analysis on three years’ worth of MEG data assessing longitudinal changes in stroke patients receiving physiotherapy.
+    Responsibilities:
+      - Organized a large dataset from a longitudinal study
+      - Analyzed MEG Data in Matlab
     Reference:
       Name: *supNiels
       Email: niels.birbaumer@uni-tuebingen.de
@@ -48,15 +89,21 @@ Research Experience:
     Supervisor: &supCorn Prof. Dr. Cornelius Schwarz
     StartDate: Oct 2012
     EndDate: Nov 2012
-    Description: In this lab rotation, I trained rats to perform whisking in response to barrel cortex stimulation viachronically-implanted electrodes, mapping stimulation sensitivity to each cortical layer.
+    Description: Trained rats to perform whisking in response to barrel cortex stimulation viachronically-implanted electrodes, mapping stimulation sensitivity to each cortical layer.
+    Responsibilities:
+      - Trained rats
+      - Recorded Rats' Electrical Brain Activity 
+      - Analyzed Electrophysiological Data in Matlab
     Reference:
       Name: *supCorn
-      Email: cornelius.chwarz@uni-tuebingen.de
+      Email: cornelius.schwarz@uni-tuebingen.de
   - Institute: *instTu
     Supervisor: Dr. Michael Barnett Cowan
     StartDate: Nov 2010
     EndDate: March 2011
     Description: Programmed an online EMG classifier in Matlab and Simulink to accurately detect finger movements within milliseconds for EEG coherence brain-computer interface training.
+    Responsibilities:
+      - Programmed online EMG classifier in Simulink 
   - Institute: &instWitt Wittenberg University
     Supervisor: &supJo Prof. Dr. Josephine Wilson
     StartDate: Dec. 2009
@@ -94,14 +141,18 @@ Industry Experience:
       Email: km.mueller@neuromarketing-labs.com
 
 Teaching Experience:
+  - Position: Tutor
+    Course Name: Writing Tutor
+    Date: Summer 2015
+    Description: Proofread and Edited research papers for graduate students in medicine, neuroscience, and philosophy to programming
   - Position: Teaching Assistant
     Course Name: Psychophysics
     Date: December 2015
-    Description: In this 2-week block course, I provided technical and programming assistance to students programming and analysing their own psychopysics experiments in Matlab, R, and Excel.
+    Description: In this 2-week block course, I acted as tutor, providing technical and programming assistance to students programming and analysing their own psychopysics experiments in Matlab, R, and Excel.
   - Position: Lecturer
     Course Name: Introduction to Matlab
-    Date: Winter 2015
-    Description: I planned and taught Matlab to beginning proramming students.
+    Date: Winter 2014
+    Description: For 3 Semesters
     Evaluation Grade: Excellent
   - Position: Lecturer
     Course Name: Introduction to Scientific Programming in Python
@@ -169,6 +220,7 @@ Skills:
     - SuperLab
     - RatCAVE
   - Statistical Analysis:
+    - Pyton SciPy Stack (Pandas, Numpy, Matplotlib)
     - Statistical Parametric Mapping (SPM)
     - SPSS
     - R
