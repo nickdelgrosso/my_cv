@@ -1,116 +1,141 @@
-\documentclass{article}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
-\usepackage{marginnote}
-\reversemarginpar
-\usepackage{graphicx}
-\usepackage[nochapters]{classicthesis}
-\usepackage[LabelsAligned]{currvita}
-\usepackage{hyperref}
-\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon}
-\newlength{\datebox}
-\settowidth{\datebox}{Tuebingen, Germany}
-\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}}
-\newcommand{\SubHeading}[1]{\vspace{1em}\noindent\spacedlowsmallcaps{#1}\vspace{0.7em}\\}
-\newcommand{\Email}[1]{\href{mailto:#1}{#1}}
-\newcommand{\MarginText}[1]{\marginpar{\raggedleft\small#1}}
-\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\footnotesize{#1}\par\normalsize\vspace{1em}}
-\newcommand{\DescMarg}[2]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small} \MarginText{#1} #2 \vspace{0.3em}\\}
-\newcommand{\HeaderOnly}[2]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 \vspace{0.5em}\\}
-\newcommand{\EntryHeader}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#2}}\hspace{1.5em} \MarginText{#1} #3 \vspace{0.5em}}
-\newcommand{\NewEntry}[4]{\EntryHeader{#1}{#2}{#3}\\\Description{#4}}
-
-
-\begin{document}
-\thispagestyle{empty}
-\raggedright
-\begin{cv}{\spacedallcaps{Nicholas A. Del Grosso}}
-\vspace{2em}
-\SubHeading{Personal Info}
-\HeaderOnly{Address}{Karl{-}Witthalm{-}Str. 3, 81375 München}
-\HeaderOnly{Telephone}{+49 170 8253289}
-\HeaderOnly{E{-}mail}{\Email{delgrosso.nick@gmail.com}}
-\SubHeading{Goals}
-\begin{itemize}
-\item
-Obtain a PhD in cognitive neuroscience by studying multimodal sensory integration and sensorimotor interactions.
-\end{itemize}
-\begin{itemize}
-\item
-Obtain teaching, project management, and laboratory experience sufficient to one day become a competent university professor.
-\end{itemize}
-\begin{itemize}
-\item
-Build technical skills in a wide variety of fields in order to perform high{-}quality research at institutes with limited resources.
-\end{itemize}
-\SubHeading{Education}
-\NewEntry{Aug 2012}{M.Sc. Neuroscience}{Max Planck International Research School, Graduate School of Neural and Behavioural Sciences}{}
-\NewEntry{May 2010}{B.Sc. Psychology}{Wittenberg University}{}
-\SubHeading{Research Experience}
-\NewEntry{May 2013 {-}\\  Present}{Ludwig{-}Maximillians Universität}{Prof. Dr. Anton Sirota}{Programmed a 3D graphics engine in Python to build virtual reality system for freely moving rats, supervised students in programming, engineering, and cognitive science projects, organized weekly journal clubs, and ordered new equipment.}
-\NewEntry{Aug 2012 {-}\\  May 2013}{Universität Tübingen}{Prof. Dr. Christoph Braun}{Wrote a research grant to study the top{-}down and bottom{-}up interactions by computational modeling information propagation in early sensory pathways as measured by MEG, designed and administrated an institute wiki, organized a student lecture series, and supervised two students’ EEG research projects.}
-\NewEntry{Nov 2011 {-}\\  July 2012}{Universität Tübingen}{Prof. Dr. Niels Birbaumer}{Programmed in Matlab a time{-}frequency and evoked potential analysis on three years’ worth of MEG data assessing longitudinal changes in stroke patients receiving physiotherapy.}
-\NewEntry{Oct 2012 {-}\\  Nov 2012}{Universität Tübingen}{Prof. Dr. Cornelius Schwarz}{In this lab rotation, I trained rats to perform whisking in response to barrel cortex stimulation viachronically{-}implanted electrodes, mapping stimulation sensitivity to each cortical layer.}
-\NewEntry{Nov 2010 {-}\\  March 2011}{Universität Tübingen}{Dr. Michael Barnett Cowan}{Programmed an online EMG classifier in Matlab and Simulink to accurately detect finger movements within milliseconds for EEG coherence brain{-}computer interface training.}
-\NewEntry{Dec. 2009 {-}\\  Aug. 2010}{Wittenberg University}{Prof. Dr. Josephine Wilson}{Built an NI{-}DAQ EEG system, programmed online analysis and data acquisition in Matlab and LabView, and confirmed its functionality in three different experiments. As a senior lab assistant, also worked as an aid for rat neurosurgery and noninvasive electrophysiology (skin conductance, EMG, EKG, and EEG) laboratory course sessions, which included planning and giving demonstrations on each method above.}
-\NewEntry{June{-}Aug 2008 {-}\\  June{-}Aug 2009}{Duke University}{Prof. Dr. Jennifer Groh}{Trained Macaque monkeys to perform visual saccade tasks while mapping receptive fields in superior and inferior colliculus.}
-\NewEntry{Aug 2007 {-}\\  Dec. 2009}{Wittenberg University}{Prof. Dr. Michael Anes}{Conducted three behavioral psychophysics studies on the hemispheric lateralization of face perception. Tasks included programming stimulus sequences in SuperLab, patient recruitment and management, data collection, and conference poster preparation.}
-\NewEntry{Nov 2006 {-}\\  March 2007}{Wittenberg University}{Prof. Dr. Jay Yoder}{Measured dessication rates in the bed bug and isolated fungal growth in three species of cockroach. These studies resulted in a publication in a peer{-}reviewed journal and a poster presentation at an undergraduate research conference.}
-\SubHeading{Industry Experience}
-\NewEntry{}{Technical Consultant}{UKT Psychosomatic Med. and Sports Med.}{I evaluated and designed a solution for performing medical science studies in a placebo study, and taught the PhD student who carried out the study over several remote sessions and a few travel consultations.}
-\NewEntry{}{Research Internship}{The Neuromarketing Labs}{I completed set{-}up of an EEG laboratory, including software calibration and noise measurements. Designed and ran two experiments estimating the evoked responses of semantic agreement and price agreement, then analyzed the data. The results from the second experiment are the basis of Dr. Müller’s recently{-}published book, "Neuropricing". Currently volunteering as an EEG consultant by giving one{-}day workshops on Fieldtrip, SPM, and artifact correction methods.}
-\SubHeading{Teaching Experience}
-\NewEntry{December 2015}{Teaching Assistant}{Psychophysics}{In this 2{-}week block course, I provided technical and programming assistance to students programming and analysing their own psychopysics experiments in Matlab, R, and Excel.}
-\NewEntry{Winter 2015}{Lecturer}{Introduction to Matlab}{I planned and taught Matlab to beginning proramming students.}
-\NewEntry{May 2016}{Lecturer}{Introduction to Scientific Programming in Python}{In this 10{-}week course, I taught beginning programmers data management, scientific data analysis, and programming skills in a new language (Python).  Besides organizing and planning the course, I also prepared all course materials, homework assignments, and graded their final projects.}
-\SubHeading{Journal Publications}
-\Description{Broetz D., Del Grosso, N.A., Rea M., Ramos{-}Murguialday, A., Soekadar S.R., Birbaumer, N. ``A New Hand Assessment Instrument for Severely Affected Stroke Patients.''  Journal of Neurorehabilitation. 2014; 34(3), 409{-}27.}
-\Description{Benoit, J.B., Del Grosso, N.A., Yoder, J.A., Denlinger, D.L. ``Resistance to Dehydration between Bouts of Blood Feeding in the Bed Bug, Cimex Lectularius, is Enhanced by Water Conservation, Aggregation, and Quiescence.'' American Journal of Tropical Medical Hygience. May 2007; 76(5), 987{-}93.}
-\SubHeading{Conference Publications}
-\NewEntry{June 2015}{Synergy Munich}{ratCAVE, A Novel Virtual Reality System for Freely{-}Moving Rodents}{}
-\NewEntry{March 2015}{Interact Munich}{Demonstrating a Freely{-}Moving Virtual Reality Approach for Rodent Research}{}
-\NewEntry{Nov 2014}{Society for Neuroscience}{ratCAVE, A Novel Virtual Reality System for Freely{-}Moving Rodents.}{}
-\NewEntry{Nov. 2012}{NENA Tübingen}{Interpreting (M)EEG, A First Look at Dynamic Causal Modeling.}{Introduced a probabilistic nonlinear modeling framework for interpretation of MEG and EEG data, along with the results of a pilot study in which we applied the approach.}
-\NewEntry{Nov. 2011}{NENA Tübingen}{The Intrinsic Bias During the Blind{-}Walking Task is Not Caused by an Aberrant Intrinsic Ground{-}Slope Model.}{}
-\NewEntry{April 2010}{Visual Sciences Society}{DIY ERPs, Designing inexpensive EEG systems for performing auditroy and visual cognitive studies.}{}
-\NewEntry{March 2010}{Butler Undergraduate Research Conference}{Discrimination and processing of deviant stimuli at the auditory cortex.}{}
-\NewEntry{Sep. 2009}{European Health Psychology Society}{Discrimination of attention{-}related and motor{-}related evoked activity by hemispheric comparison over the motor cortex.}{}
-\NewEntry{May 2009}{Visual Sciences Society}{Are Local Changes in Faces Really Local?}{}
-\NewEntry{May 2008}{Visual Sciences Society}{Hemispheric specialization for face processing revealed by use of thatcherized and feature{-}distorted faces.}{}
-\SubHeading{Skills}
-\begin{itemize}
-\item
-\textbf{Languages}: English (Mother Tongue), German (Level B1), French (Level A1-2)
-\end{itemize}
-\begin{itemize}
-\item
-\textbf{Programming}: Python, Matlab, C-Sharp, GLSL, R, LabView, C, Bash/Linux, LaTeX
-\end{itemize}
-\begin{itemize}
-\item
-\textbf{Stimulus Presentation}: Psychopy, Neurobs Presentation, Psychophysics Toolbox, OpenGL, Pyglet, SuperLab, RatCAVE
-\end{itemize}
-\begin{itemize}
-\item
-\textbf{Statistical Analysis}: Statistical Parametric Mapping (SPM), SPSS, R, Matlab Statistics Toolbox, Fieldtrip, gTec Analyze, BrainVision Analyzer
-\end{itemize}
-\begin{itemize}
-\item
-\textbf{Graphics}: Blender, Adobe Suite (Photoshop, Illustrator, and InDesign), OpenGL, Google SketchUp, GIMP, Inkspace
-\end{itemize}
-\begin{itemize}
-\item
-\textbf{Wet Lab Skills}: Rat Neurosurgery, Animal Behavioral training (rats and monkeys), in vivo electrophysiology (single needle electrodes, chronically-implanted electrode arrays, noninvasive arrays of EEG electrodes and MEG sensors), Basic Electronics, Comfortable with building custom laboratory equipment
-\end{itemize}
-\begin{itemize}
-\item
-\textbf{EEG System Experience}: BrainProducts, gTec, Grass Instruments, CTF
-\end{itemize}
-\SubHeading{Awards}
-\DescMarg{2015}{Best Poster Award at Interact Munich Conference}
-\DescMarg{2011}{National Science Foundation Graduate Research Fellowship}
-\DescMarg{2008}{NSF Neuroscience REU Fellowship at Duke University}
-\includegraphics[width=5cm]{images/Signaturetransparant.png}
-\end{cv}
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{marginnote}%
+\reversemarginpar%
+\usepackage{graphicx}%
+\usepackage[nochapters]{classicthesis}%
+\usepackage[LabelsAligned]{currvita}%
+\usepackage{hyperref}%
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon}%
+\newlength{\datebox}%
+\settowidth{\datebox}{Tuebingen, Germany}%
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}}%
+\newcommand{\SubHeading}[1]{\vspace{1em}\noindent\spacedlowsmallcaps{#1}\vspace{0.7em}\\}%
+\newcommand{\Email}[1]{\href{mailto:#1}{#1}}%
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\small#1}}%
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\footnotesize{#1}\par\normalsize\vspace{1em}}%
+\newcommand{\DescMarg}[2]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small} \MarginText{#1} #2 \vspace{0.3em}\\}%
+\newcommand{\HeaderOnly}[2]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 \vspace{0.5em}\\}%
+\newcommand{\EntryHeader}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#2}}\hspace{1.5em} \MarginText{#1} #3 \vspace{0.5em}}%
+\newcommand{\NewEntry}[4]{\EntryHeader{#1}{#2}{#3}\\\Description{#4}}%
+%
+%
+%
+\begin{document}%
+\normalsize%
+\thispagestyle{empty}%
+\raggedright%
+\begin{cv}{\spacedallcaps{Nicholas A. Del Grosso}}%
+\vspace{2em}%
+\SubHeading{Personal Info}%
+\HeaderOnly{Address}{Karl{-}Witthalm{-}Str. 3, 81375 München}%
+\HeaderOnly{Telephone}{+49 170 8253289}%
+\HeaderOnly{E{-}mail}{\Email{delgrosso.nick@gmail.com}}%
+\SubHeading{Goals}%
+\begin{itemize}%
+\item%
+Obtain teaching, project management, and laboratory experience sufficient to one day become a competent university professor.%
+\end{itemize}%
+\begin{itemize}%
+\item%
+Build technical skills in a wide variety of fields in order to perform high{-}quality research at institutes with limited resources.%
+\end{itemize}%
+\begin{itemize}%
+\item%
+Obtain a PhD in cognitive neuroscience by studying multimodal sensory integration and sensorimotor interactions.%
+\end{itemize}%
+\begin{itemize}%
+\item%
+Support open science by building tools and teaching research methodology that promotes reproducible research.%
+\end{itemize}%
+\SubHeading{Education}%
+\NewEntry{Aug 2012}{M.Sc. Neuroscience}{Max Planck International Research School, Graduate School of Neural and Behavioural Sciences}{}%
+\NewEntry{May 2010}{B.Sc. Psychology}{Wittenberg University}{}%
+\SubHeading{Research Experience}%
+\NewEntry{May 2013 {-}\newline%
+  Present}{Ludwig{-}Maximillians Universität}{Prof. Dr. Anton Sirota}{Programmed a 3D graphics engine in Python to build virtual reality system for freely moving rats, designed and carried out cognitive science experiments testing the generalizability of virtual reality research to its real{-}world counterparts, supervised six students in programming, engineering, and cognitive science projects, organized weekly journal clubs, planned departmental social events and retreats, and ordered new laboratory equipment.}%
+\NewEntry{Aug 2012 {-}\newline%
+  May 2013}{Universität Tübingen}{Prof. Dr. Christoph Braun}{Wrote a research grant to study the top{-}down and bottom{-}up interactions by computational modeling information propagation in early sensory pathways as measured by MEG, designed and administrated an institute wiki, organized a student lecture series, and supervised two students’ EEG research projects.}%
+\NewEntry{Nov 2011 {-}\newline%
+  July 2012}{Universität Tübingen}{Prof. Dr. Niels Birbaumer}{Programmed a time{-}frequency and evoked potential analysis in Matlab on three years’ worth of MEG data assessing longitudinal changes in stroke patients receiving physiotherapy.}%
+\NewEntry{Oct 2012 {-}\newline%
+  Nov 2012}{Universität Tübingen}{Prof. Dr. Cornelius Schwarz}{In this lab rotation, I trained rats to perform whisking in response to barrel cortex stimulation viachronically{-}implanted electrodes, mapping stimulation sensitivity to each cortical layer.}%
+\NewEntry{Nov 2010 {-}\newline%
+  March 2011}{Universität Tübingen}{Dr. Michael Barnett Cowan}{Programmed an online EMG classifier in Matlab and Simulink to accurately detect finger movements within milliseconds for EEG coherence brain{-}computer interface training.}%
+\NewEntry{Dec. 2009 {-}\newline%
+  Aug. 2010}{Wittenberg University}{Prof. Dr. Josephine Wilson}{Built an NI{-}DAQ EEG system, programmed online analysis and data acquisition in Matlab and LabView, and confirmed its functionality in three different experiments. As a senior lab assistant, also worked as an aid for rat neurosurgery and noninvasive electrophysiology (skin conductance, EMG, EKG, and EEG) laboratory course sessions, which included planning and giving demonstrations on each method above.}%
+\NewEntry{June{-}Aug 2008 {-}\newline%
+  June 2009}{Duke University}{Prof. Dr. Jennifer Groh}{Trained Macaque monkeys to perform visual saccade tasks while mapping receptive fields in superior and inferior colliculus.}%
+\NewEntry{Aug 2007 {-}\newline%
+  Dec. 2009}{Wittenberg University}{Prof. Dr. Michael Anes}{Conducted three behavioral psychophysics studies on the hemispheric lateralization of face perception. Tasks included programming stimulus sequences in SuperLab, patient recruitment and management, data collection, and conference poster preparation.}%
+\NewEntry{Nov 2006 {-}\newline%
+  March 2007}{Wittenberg University}{Prof. Dr. Jay Yoder}{Measured dessication rates in the bed bug and isolated fungal growth in three species of cockroach. These studies resulted in a publication in a peer{-}reviewed journal and a poster presentation at an undergraduate research conference.}%
+\SubHeading{Industry Experience}%
+\NewEntry{}{Technical Consultant}{UKT Psychosomatic Med. and Sports Med.}{I evaluated and designed a solution for performing medical science studies in a placebo study, and taught the PhD student who carried out the study over several remote sessions and a few travel consultations.}%
+\NewEntry{}{Research Internship}{The Neuromarketing Labs}{I completed set{-}up of an EEG laboratory, including software calibration and noise measurements. Designed and ran two experiments estimating the evoked responses of semantic agreement and price agreement, then analyzed the data. The results from the second experiment are the basis of Dr. Müller’s recently{-}published book, "Neuropricing". Currently volunteering as an EEG consultant by giving one{-}day workshops on Fieldtrip, SPM, and artifact correction methods.}%
+\SubHeading{Teaching Experience}%
+\NewEntry{December 2015}{Teaching Assistant}{Psychophysics}{In this 2{-}week block course, I provided technical and programming assistance to students programming and analysing their own psychopysics experiments in Matlab, R, and Excel.}%
+\NewEntry{Winter 2015}{Lecturer}{Introduction to Matlab}{I planned and taught Matlab to beginning proramming students.}%
+\NewEntry{Summer 2016 and Summer 2017}{Lecturer}{Introduction to Scientific Programming in Python}{In this semester course, taught two years in a row, I taught beginning programmers data management, scientific data analysis, and programming skills in a new language (Python).  Besides organizing and planning the course, I also prepared all course materials, homework assignments, and graded their final projects.}%
+\NewEntry{July 2016 and July 2017}{Trainer}{Introduction to Scientific Programming in Python}{This 4{-}day workshop is an intensive version of the semester Python course I teach at LMU.  In this period, students with no programming experience gain the skills needed to perform data analysis and in Python and reason about their analysis workflow.}%
+\NewEntry{Summer 2017}{Organizer}{Super Python Talks for Life Science}{I organized a biweekly seminar series for teaching intermediate{-}level data analysis and Python programming tutorials, given by 10 PhD students and Pos{-}docs, including myself.  Besides recruiting these speakers, I organized the room and equipment for these sessions, advertised the events, and ran the sessions.  This series was successful; it was regularly attended by 30{-}70 researchers.}%
+\SubHeading{Journal Publications}%
+\Description{Broetz D., Del Grosso, N.A., Rea M., Ramos{-}Murguialday, A., Soekadar S.R., Birbaumer, N. ``A New Hand Assessment Instrument for Severely Affected Stroke Patients.''  Journal of Neurorehabilitation. 2014; 34(3), 409{-}27.}%
+\Description{Benoit, J.B., Del Grosso, N.A., Yoder, J.A., Denlinger, D.L. ``Resistance to Dehydration between Bouts of Blood Feeding in the Bed Bug, Cimex Lectularius, is Enhanced by Water Conservation, Aggregation, and Quiescence.'' American Journal of Tropical Medical Hygience. May 2007; 76(5), 987{-}93.}%
+\SubHeading{Conference Publications}%
+\NewEntry{July 2017}{PyData Barcelona}{The Neuroscience Lab; A Tour Through the Eyes of a Pythonista}{}%
+\NewEntry{November 2016}{Munich Interact}{Tracking Rats Exploring a Virtual World; Do They Believe what they See?}{}%
+\NewEntry{July 2016}{FENS Forum of Neuroscience}{Probing Rodent Perception of Virtual Environments with Freely{-}Moving Virtual Reality}{}%
+\NewEntry{June 2015}{Synergy Munich}{ratCAVE, A Novel Virtual Reality System for Freely{-}Moving Rodents}{}%
+\NewEntry{March 2015}{Interact Munich}{Demonstrating a Freely{-}Moving Virtual Reality Approach for Rodent Research}{}%
+\NewEntry{Nov 2014}{Society for Neuroscience}{ratCAVE, A Novel Virtual Reality System for Freely{-}Moving Rodents.}{}%
+\NewEntry{Nov. 2012}{NENA Tübingen}{Interpreting (M)EEG, A First Look at Dynamic Causal Modeling.}{Introduced a probabilistic nonlinear modeling framework for interpretation of MEG and EEG data, along with the results of a pilot study in which we applied the approach.}%
+\NewEntry{Nov. 2011}{NENA Tübingen}{The Intrinsic Bias During the Blind{-}Walking Task is Not Caused by an Aberrant Intrinsic Ground{-}Slope Model.}{}%
+\NewEntry{April 2010}{Visual Sciences Society}{DIY ERPs, Designing inexpensive EEG systems for performing auditroy and visual cognitive studies.}{}%
+\NewEntry{March 2010}{Butler Undergraduate Research Conference}{Discrimination and processing of deviant stimuli at the auditory cortex.}{}%
+\NewEntry{Sep. 2009}{European Health Psychology Society}{Discrimination of attention{-}related and motor{-}related evoked activity by hemispheric comparison over the motor cortex.}{}%
+\NewEntry{May 2009}{Visual Sciences Society}{Are Local Changes in Faces Really Local?}{}%
+\NewEntry{May 2008}{Visual Sciences Society}{Hemispheric specialization for face processing revealed by use of thatcherized and feature{-}distorted faces.}{}%
+\SubHeading{Skills}%
+\begin{itemize}%
+\item%
+\textbf{Languages}: English (Mother Tongue), German (Level B1), French (Level A1-2)%
+\end{itemize}%
+\begin{itemize}%
+\item%
+\textbf{Programming}: Python, Matlab, C-Sharp, GLSL, R, LabView, C, Bash/Linux, LaTeX%
+\end{itemize}%
+\begin{itemize}%
+\item%
+\textbf{Stimulus Presentation}: Psychopy, Neurobs Presentation, Psychophysics Toolbox, OpenGL, Pyglet, SuperLab, RatCAVE%
+\end{itemize}%
+\begin{itemize}%
+\item%
+\textbf{Statistical Analysis}: Statistical Parametric Mapping (SPM), SPSS, R, Matlab Statistics Toolbox, Fieldtrip, gTec Analyze, BrainVision Analyzer%
+\end{itemize}%
+\begin{itemize}%
+\item%
+\textbf{Graphics}: Blender, Adobe Suite (Photoshop, Illustrator, and InDesign), OpenGL, Google SketchUp, GIMP, Inkspace%
+\end{itemize}%
+\begin{itemize}%
+\item%
+\textbf{Wet Lab Skills}: Rat Neurosurgery, Animal Behavioral training (rats and monkeys), in vivo electrophysiology (single needle electrodes, chronically-implanted electrode arrays, noninvasive arrays of EEG electrodes and MEG sensors), Basic Electronics, Comfortable with building custom laboratory equipment%
+\end{itemize}%
+\begin{itemize}%
+\item%
+\textbf{EEG System Experience}: BrainProducts, gTec, Grass Instruments, CTF%
+\end{itemize}%
+\SubHeading{Awards}%
+\DescMarg{July 2017}{Hackathon Track Winner at Media Lab Bayern Event "FutureLab{-}{-}Smart Home meets Journalism"}%
+\DescMarg{April 2017}{Hackathon Winner at Burda Bootcamp Event "Love Hackathon"}%
+\DescMarg{2016}{Best Talk Award at Interact Munich Conference}%
+\DescMarg{2015}{Best Poster Award at Interact Munich Conference}%
+\DescMarg{2011}{National Science Foundation Graduate Research Fellowship}%
+\DescMarg{2008}{NSF Neuroscience REU Fellowship at Duke University}%
+\includegraphics[width=5cm]{images/Signaturetransparant.png}%
+\end{cv}%
 \end{document}
