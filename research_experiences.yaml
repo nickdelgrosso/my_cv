@@ -104,7 +104,7 @@ Teaching Experience:
     Date: Winter 2015
     Description: I planned and taught Matlab to beginning proramming students.
     Evaluation Grade: Excellent
-  - Position: Lecturer
+  - Position: Data Science Lecturer
     Course Name: Introduction to Scientific Programming in Python
     Date: Summer 2016 and Summer 2017
     Description: In this semester course, taught two years in a row, I taught beginning programmers data management, scientific data analysis, and programming skills in a new language (Python).  Besides organizing and planning the course, I also prepared all course materials, homework assignments, and graded their final projects.
@@ -116,9 +116,17 @@ Teaching Experience:
     Course Name: Super Python Talks for Life Science
     Date: Summer 2017
     Description: I organized a biweekly seminar series for teaching intermediate-level data analysis and Python programming tutorials, given by 10 PhD students and Pos-docs, including myself.  Besides recruiting these speakers, I organized the room and equipment for these sessions, advertised the events, and ran the sessions.  This series was successful; it was regularly attended by 30-70 researchers.
-
+  - Position: Organizer
+    Course Name: PyData Munich
+    Date: Fall 2017
+    Description: I revived a local chapter for the global PyData organization, coordinating with technology companies in Munich (e.g. Google, Nokia, TNG Consulting, JetBrains, and Wayra) to build a data-science teaching community through the MeetUp platform. These companies now host biweekly tutorials at their event spaces, sponsoring each event and providing spaces for university researchers and tech industry specialists to meet, interact, and learn together.
+  - Position: 3D Graphics Instructor
+    Course Name: Animal Tracking and VR Bootcamp
+    Date: October 2017
+    Description: I co-taught an international, week-long workshop on combining animal tracking through machine vision methods and 3D graphics applications to build virtual reality systems for freely-moving animals.  Besides theoretical lectures on the mathematics and engineering behind virtual reality systems, I wrote tutorials for software I wrote to teach the concepts, from which the participants, consisting of PhD students, Post-docs, and Professors, built their own prototype VR systems for ants.
 
 Journal Publications:
+  - Nicholas A. Del Grosso, Justin J. Graboski, Weiwei Chen, Eduardo Blanco Hernández, Anton Sirota. ``Virtual Reality system for freely-moving rodents.'' bioRxiv 161232. July 2017; doi: https://doi.org/10.1101/161232
   - Broetz D., Del Grosso, N.A., Rea M., Ramos-Murguialday, A., Soekadar S.R., Birbaumer, N. ``A New Hand Assessment Instrument for Severely Affected Stroke Patients.''  Journal of Neurorehabilitation. 2014; 34(3), 409-27.
   - Benoit, J.B., Del Grosso, N.A., Yoder, J.A., Denlinger, D.L. ``Resistance to Dehydration between Bouts of Blood Feeding in the Bed Bug, Cimex Lectularius, is Enhanced by Water Conservation, Aggregation, and Quiescence.'' American Journal of Tropical Medical Hygience. May 2007; 76(5), 987-93.
 
