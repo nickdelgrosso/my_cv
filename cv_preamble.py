@@ -25,7 +25,7 @@ def get_cv_doc(filename):
     doc.packages.append(UnsafeCommand('newlength', r'\datebox', ))
     doc.packages.append(UnsafeCommand('settowidth', r'\datebox', extra_arguments='Tuebingen, Germany'))
 
-    doc.packages.append(UnsafeCommand('renewcommand', r'\cvheadingfont', extra_arguments=r'\LARGE\color{Maroon}'))
+    doc.packages.append(UnsafeCommand('renewcommand', r'\cvheadingfont', extra_arguments=r'\LARGE'))
 
     # Unchanged-ish (Extra line break at the end)
     doc.packages.append(UnsafeCommand('newcommand', r'\SubHeading', options=1,

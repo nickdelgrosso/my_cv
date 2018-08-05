@@ -30,7 +30,7 @@ with doc.create(CV(data, arguments='Nicholas A. Del Grosso')) as cv:
     cv.build_section('Industry Experience', lambda x: NewEntry([' -\n '.join(x['StartDate', x['EndDate']]),
                                                                        x['Position'], x['Institute'], x['Description']]))
 
-    cv.build_section('Teaching Experience', lambda x: NewEntry([x['Date'], x['Position'], x['Course Name'], x['Description']]))
+    cv.build_section('Teaching Experience', lambda x: NewEntry([x['Date'], x['Position'], x['Course Name'], x['Description']]), reverse=True)
 
     cv.build_section('Journal Publications', lambda x: Description(x))
 
