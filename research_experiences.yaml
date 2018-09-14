@@ -1,8 +1,8 @@
 ---
 Personliche Daten:
-  - Address: Karl-Witthalm-Str. 3, 81375 München
-  - Telephone: +49 170 8253289
-  - E-mail: delgrosso.nick@gmail.com
+  - Adresse: Karl-Witthalm-Str. 3, 81375 München
+  - Telefone: +49 170 8253289
+  - Email: delgrosso.nick@gmail.com
 
 Ziele:
   - Andere dazu inspirieren, durch Mentoring, Unterricht und Führung großartige Dinge zu erreichen.
@@ -11,11 +11,17 @@ Ziele:
   - Erhalten Sie Lehr-, Projektmanagement- und Laborerfahrung, um eines Tages ein kompetenter Universitätsprofessor zu werden.
 
 Ausbildung:
-  - Degree: M.Sc. Neuroscience
+  - Degree: PhD. Neurowissenschaft
+    Date: Oct 2014 - Present
+    StartDate: Oct 2014
+    EndDate: Present
+    Completed: False
+    Institute: Graduate School of Systemic Neurosciences, Lüdwig-Maximillians Üniversität
+  - Degree: M.Sc. Neurowissenschaft
     Date: Aug 2012
     Institute: Max Planck International Research School, Graduate School of Neural and Behavioural Sciences
     Location: Tübingen, Germany
-  - Degree: B.Sc. Psychology
+  - Degree: B.Sc. Psychologie
     Date: May 2010
     Institute: Wittenberg University
     Location: Springfield, Ohio
@@ -124,6 +130,18 @@ Lehrerfahrung:
     Course Name: Tierverfolgung und VR Bootcamp
     Date: October 2017
     Description: Ich habe einen internationalen, einwöchigen Workshop über die Kombination von Tierverfolgung mit Methoden der Bildverarbeitung und 3D-Grafikanwendungen gelehrt, um virtuelle Realitätssysteme für frei bewegliche Tiere zu bauen. Neben theoretischen Vorlesungen über Mathematik und Technik hinter Virtual Reality Systemen schrieb ich Tutorials für Software, die ich geschrieben habe, um die Konzepte zu unterrichten, aus denen die Teilnehmer, bestehend aus Doktoranden, Postdocs und Professoren, ihre eigenen Prototyp-VR-Systeme für Ameisen entwickelten.
+  - Position: Soft Skills Trainer
+    Course Name: Präsentationsfähigkeiten für Wissenschaftler
+    Date: April 2018 - Present
+    Description: Mit diesem 1-2-tägigen Workshop unterrichtete ich effektive Sprechorganisation und skizzierte Fähigkeiten für wissenschaftliche Präsentationen. Wissenschaftler gewinnen Vertrauen, indem sie lernen, sich auf ihre Ziele zu konzentrieren und durch wiederholtes Üben überzeugend zu sprechen.
+  - Position: Veranstalter
+    Course Name: Munich Science Slam
+    Date: April 2018
+    Description: Organisation eines Science-Slam Verananstaltung in einer lokalen Veranstaltungshalle mit 14 Referenten aus 5 Instituten, um Vorträge zu halten. Integriert ein Echtzeit-Bewertungssystem in die Veranstaltung für die 60 Zuschauer für Feedback verwenden. Diese Veranstaltung war erfolgreich und wurde im Oktober 2018 wiederholt
+  - Position: Programming Instructor
+    Course Name: Lehrstatistik mit R
+    Date: July 2018
+    Description: This 4-day workshop is an intensive R course taught to the Psychology department professors at Kwantlen University in Vancouver, Canada.  In this course, they learned the R programming language and how to build statistics teaching materials with it.
 
 wissenschaftliche Publikationen:
   - Nicholas A. Del Grosso, Justin J. Graboski, Weiwei Chen, Eduardo Blanco Hernández, Anton Sirota. ``Virtual Reality system for freely-moving rodents.'' bioRxiv 161232. July 2017; doi: https://doi.org/10.1101/161232
@@ -131,6 +149,12 @@ wissenschaftliche Publikationen:
   - Benoit, J.B., Del Grosso, N.A., Yoder, J.A., Denlinger, D.L. ``Resistance to Dehydration between Bouts of Blood Feeding in the Bed Bug, Cimex Lectularius, is Enhanced by Water Conservation, Aggregation, and Quiescence.'' American Journal of Tropical Medical Hygience. May 2007; 76(5), 987-93.
 
 Konferenzpublikationen:
+  - Conference: Harvard-LMU Young Scientists Forum
+    Date: September 2018
+    Title: Testing CAVE virtual reality systems for use in animal behavior research
+  - Conference: Society for Neuroscience
+    Date: November 2017
+    Title: Generalized Rat Spontaneous Behavior in a CAVE Experimental Setup.
   - Conference: PyData Barcelona
     Date: July 2017
     Title: The Neuroscience Lab; A Tour Through the Eyes of a Pythonista

@@ -20,7 +20,7 @@ with doc.create(CV(data, arguments='Nicholas A. Del Grosso')) as cv:
             if 'mail' in key:
                 value = Email(value)
             return HeaderOnly([key, value])
-    cv.build_section('Personal Info', format_personal)
+    cv.build_section('Personliche Daten', format_personal)
 
     cv.build_section_itemized('Ziele', lambda x: x)
 
@@ -46,9 +46,9 @@ with doc.create(CV(data, arguments='Nicholas A. Del Grosso')) as cv:
         key = list(entry)[0]
         value = entry[key]
         return bold(NoEscape(key)) + NoEscape(': {}'.format(', '.join(value)))
-    cv.build_section_itemized('Skills', format_skill_item)
+    cv.build_section_itemized('Sonstiges', format_skill_item)
 
-    cv.build_section('Awards', lambda x: DescMarg([x['Date'], x['Title']]))
+    cv.build_section('Auszeichnungen', lambda x: DescMarg([x['Date'], x['Title']]))
 
     # Add a signature at the bottom
     cv.append('Full List of Positions and Publications Available Upon Request.')
