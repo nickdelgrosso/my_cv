@@ -40,14 +40,14 @@ Research Experience:
     StartDate: May 2013
     EndDate: Present
     Description: Programmed a 3D graphics engine in Python to build virtual reality system for freely moving rats, supervised students in programming, engineering, and cognitive science projects, organized weekly journal clubs, and ordered new equipment, trained rodents to perform behavioral tasks, and performed surgery on said rodents as part of brain research.
-    Responsibilities: 
+    Responsibilities:
       - Programmed a 3D graphics engine in Python
       - Designed and Built a Novel Virtual Reality System
       - Supervised Five Students in Engineering, Cognitive Science, and Programming projects lasting 3-12 months
       - Organized weekly lab meetings
       - Ordered Laboratory Equipment
       - Programmed an Interface to the lab's 3D Optical Tracking system.
-      - Performed Market Research 
+      - Performed Market Research
       - Performed Animal Training
       - Performed Rodent Brain Surgery
     Reference:
@@ -59,7 +59,7 @@ Research Experience:
     EndDate: May 2013
     Description: Wrote a research grant to study the top-down and bottom-up interactions by computational modeling information propagation in early sensory pathways as measured by MEG, designed and administrated an institute wiki, organized a student lecture series, and supervised two students’ EEG research projects.
     Responsibilities:
-      - Wrote a research grant 
+      - Wrote a research grant
       - Collected MEG, EEG, and EMG data.
       - Designed and Administrated an Wiki for the Research Institute
       - Organized a Seminar
@@ -85,7 +85,7 @@ Research Experience:
     Description: Trained rats to perform whisking in response to barrel cortex stimulation viachronically-implanted electrodes, mapping stimulation sensitivity to each cortical layer.
     Responsibilities:
       - Trained rats
-      - Recorded Rats' Electrical Brain Activity 
+      - Recorded Rats' Electrical Brain Activity
       - Analyzed Electrophysiological Data in Matlab
     Reference:
       Name: *supCorn
@@ -96,7 +96,7 @@ Research Experience:
     EndDate: March 2011
     Description: Programmed an online EMG classifier in Matlab and Simulink to accurately detect finger movements within milliseconds for EEG coherence brain-computer interface training.
     Responsibilities:
-      - Programmed online EMG classifier in Simulink 
+      - Programmed online EMG classifier in Simulink
   - Institute: &instWitt Wittenberg University
     Supervisor: &supJo Prof. Dr. Josephine Wilson
     StartDate: Dec. 2009
@@ -136,7 +136,7 @@ Industry Experience:
 Teaching Experience:
   - Position: Proofreader
     Course Name: Freelance Proofreader
-    Date: 2015 - Present
+    Date: 2015 - 2017
     Description: Proofread and Edited research papers for graduate students in medicine, neuroscience, and philosophy to programming
   - Position: Teaching Assistant
     Course Name: Psychophysics
@@ -147,13 +147,13 @@ Teaching Experience:
     Date: Winter 2013 - Summer 2014
     Description: For 3 Semesters, I taught a 2-week introduction to programming course to beginning programmers.  Besides organizing, planning, and teaching the course, I also prepared all course materials and homework assignments.
     Evaluation Grade: Excellent
-  - Position: Data Science Lecturer
-    Course Name: Introduction to Scientific Programming in Python
-    Date: Summer 2016 and Summer 2017
+  - Position: Lecturer
+    Course Name: Intro. to Scientific Programming in Python
+    Date: Summer 2016 - Summer 2017
     Description: In this semester course, taught two years in a row, I taught beginning programmers data management, scientific data analysis, and programming skills in a new language (Python).  Besides organizing and planning the course, I also prepared all course materials, homework assignments, and graded their final projects.
   - Position: Trainer
-    Course Name: Introduction to Scientific Programming in Python
-    Date: July 2016 and July 2017
+    Course Name: Intro. to Scientific Programming in Python
+    Date: July 2016 - Present
     Description: This 4-day workshop is an intensive version of the semester Python course I teach at LMU.  In this period, students with no programming experience gain the skills needed to perform data analysis and in Python and reason about their analysis workflow.
   - Position: Organizer
     Course Name: Super Python Talks for Life Science
@@ -161,12 +161,24 @@ Teaching Experience:
     Description: I organized a biweekly seminar series for teaching intermediate-level data analysis and Python programming tutorials, given by 10 PhD students and Pos-docs, including myself.  Besides recruiting these speakers, I organized the room and equipment for these sessions, advertised the events, and ran the sessions.  This series was successful; it was regularly attended by 30-70 researchers.
   - Position: Organizer
     Course Name: PyData Munich
-    Date: Fall 2017
+    Date: Fall 2017 - Present
     Description: I revived a local chapter for the global PyData organization, coordinating with technology companies in Munich (e.g. Google, Nokia, TNG Consulting, JetBrains, and Wayra) to build a data-science teaching community through the MeetUp platform. These companies now host biweekly tutorials at their event spaces, sponsoring each event and providing spaces for university researchers and tech industry specialists to meet, interact, and learn together.
   - Position: 3D Graphics Instructor
     Course Name: Animal Tracking and VR Bootcamp
     Date: October 2017
     Description: I co-taught an international, week-long workshop on combining animal tracking through machine vision methods and 3D graphics applications to build virtual reality systems for freely-moving animals.  Besides theoretical lectures on the mathematics and engineering behind virtual reality systems, I wrote tutorials for software I wrote to teach the concepts, from which the participants, consisting of PhD students, Post-docs, and Professors, built their own prototype VR systems for ants.
+  - Position: Soft Skills Trainer
+    Course Name: Presentation Skills for Scientists
+    Date: April 2018 - Present
+    Description: With this 1-2 day workshop, I taught effective talk organization and outlining skills for scientific presentations.  Scientists gain confidence by learning how to focus on their goals and delivering speeches convincingly through repeated practice.
+  - Position: Organizer
+    Course Name: Munich Science Slam
+    Date: April 2018
+    Description: Arranged a science slam event at a local industry event space, working with 14 speakers from 5 institutes to give talks in a competion.  Integrated a real-time evaluation system into the event for the 60 audience members to use for feedback.  This event was successful and was repeated in October 2018
+  - Position: Programming Instructor
+    Course Name: Teaching Statistics with R
+    Date: July 2018
+    Description: This 4-day workshop is an intensive R course taught to the Psychology department professors at Kwantlen University in Vancouver, Canada.  In this course, they learned the R programming language and how to build statistics teaching materials with it.
 
 Journal Publications:
   - Nicholas A. Del Grosso, Justin J. Graboski, Weiwei Chen, Eduardo Blanco Hernández, Anton Sirota. ``Virtual Reality system for freely-moving rodents.'' bioRxiv 161232. July 2017; doi: https://doi.org/10.1101/161232
@@ -174,6 +186,12 @@ Journal Publications:
   - Benoit, J.B., Del Grosso, N.A., Yoder, J.A., Denlinger, D.L. ``Resistance to Dehydration between Bouts of Blood Feeding in the Bed Bug, Cimex Lectularius, is Enhanced by Water Conservation, Aggregation, and Quiescence.'' American Journal of Tropical Medical Hygience. May 2007; 76(5), 987-93.
 
 Conference Publications:
+  - Conference: Harvard-LMU Young Scientists Forum
+    Date: September 2018
+    Title: Testing CAVE virtual reality systems for use in animal behavior research
+  - Conference: Society for Neuroscience
+    Date: November 2017
+    Title: Generalized Rat Spontaneous Behavior in a CAVE Experimental Setup.
   - Conference: PyData Barcelona
     Date: July 2017
     Title: The Neuroscience Lab; A Tour Through the Eyes of a Pythonista
@@ -281,5 +299,3 @@ Awards:
     Title: National Science Foundation Graduate Research Fellowship
   - Date: 2008
     Title: NSF Neuroscience REU Fellowship at Duke University
-
-

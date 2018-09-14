@@ -1,112 +1,3 @@
-<<<<<<< HEAD
-\documentclass{article}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
-\usepackage{marginnote}
-\reversemarginpar
-\usepackage{graphicx}
-\usepackage[nochapters]{classicthesis}
-\usepackage[LabelsAligned]{currvita}
-\usepackage{hyperref}
-\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon}
-\newlength{\datebox}
-\settowidth{\datebox}{Tuebingen, Germany}
-\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}}
-\newcommand{\SubHeading}[1]{\vspace{1em}\noindent\spacedlowsmallcaps{#1}\vspace{0.7em}\\}
-\newcommand{\Email}[1]{\href{mailto:#1}{#1}}
-\newcommand{\MarginText}[1]{\marginpar{\raggedleft\small#1}}
-\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\footnotesize{#1}\par\normalsize\vspace{1em}}
-\newcommand{\DescMarg}[2]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small} \MarginText{#1} #2 \vspace{0.3em}\\}
-\newcommand{\HeaderOnly}[2]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 \vspace{0.5em}\\}
-\newcommand{\EntryHeader}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#2}}\hspace{1.5em} \MarginText{#1} #3 \vspace{0.5em}}
-\newcommand{\NewEntry}[4]{\EntryHeader{#1}{#2}{#3}\\\Description{#4}}
-
-
-\begin{document}
-\thispagestyle{empty}
-\raggedright
-\begin{cv}{\spacedallcaps{Nicholas A. Del Grosso}}
-\vspace{2em}
-\SubHeading{Personal Info}
-\HeaderOnly{Address}{Karl{-}Witthalm{-}Str. 3, 81375 München}
-\HeaderOnly{Telephone}{+49 170 8253289}
-\HeaderOnly{E{-}mail}{\Email{delgrosso@bio.lmu.de}}
-\SubHeading{Goals}
-\begin{itemize}
-\item
-To continually improve my teaching, programming, and project management skills.
-\end{itemize}
-\begin{itemize}
-\item
-To provide laboratory experiences and an outstanding science education.
-\end{itemize}
-\begin{itemize}
-\item
-To inspire, motivate students through science and critical thinking.
-\end{itemize}
-\begin{itemize}
-\item
-To empower individuals by developing, and teaching open{-}source software and tools.
-\end{itemize}
-\SubHeading{Education}
-\NewEntry{Oct 2014 {-} Present}{PhD. Cognitive Neuroscience}{Lüdwig{-}Maximillians Üniversität}{}
-\NewEntry{Aug 2012 {-} Oct 2014}{PhD. Cognitive Neuroscience}{Max Planck International Research School, Graduate School of Neural and Behavioural Sciences}{}
-\NewEntry{Aug 2012}{M.Sc. Neuroscience}{Max Planck International Research School, Graduate School of Neural and Behavioural Sciences}{}
-\NewEntry{May 2010}{B.Sc. Psychology}{Wittenberg University}{}
-\SubHeading{Teaching Experience}
-\NewEntry{May 2016}{Lecturer}{Introduction to Scientific Programming in Python}{In this 10{-}week course, I taught beginning programmers data management, scientific data analysis, and programming skills in a new language (Python).  Besides organizing and planning the course, I also prepared all course materials, homework assignments, and graded their final projects.}
-\NewEntry{Winter 2013 {-} Summer 2014}{Lecturer}{Introduction to Matlab}{For 3 Semesters, I taught a 2{-}week introduction to programming course to beginning programmers.  Besides organizing, planning, and teaching the course, I also prepared all course materials and homework assignments.}
-\NewEntry{December 2015}{Teaching Assistant}{Psychophysics}{In this 2{-}week block course, I acted as tutor, providing technical and programming assistance to students programming and analysing their own psychopysics experiments in Matlab, R, and Excel.}
-\NewEntry{2015 {-} Present}{Proofreader}{Freelance Proofreader}{Proofread and Edited research papers for graduate students in medicine, neuroscience, and philosophy to programming}
-\SubHeading{Research Experience}
-\NewEntry{May 2013 {-}\\  Present}{Ludwig{-}Maximillians Universität}{Prof. Dr. Anton Sirota}{Programmed a 3D graphics engine in Python to build virtual reality system for freely moving rats, supervised students in programming, engineering, and cognitive science projects, organized weekly journal clubs, and ordered new equipment, trained rodents to perform behavioral tasks, and performed surgery on said rodents as part of brain research.}
-\NewEntry{Aug 2012 {-}\\  May 2013}{Universität Tübingen}{Prof. Dr. Christoph Braun}{Wrote a research grant to study the top{-}down and bottom{-}up interactions by computational modeling information propagation in early sensory pathways as measured by MEG, designed and administrated an institute wiki, organized a student lecture series, and supervised two students’ EEG research projects.}
-\NewEntry{Nov 2011 {-}\\  July 2012}{Universität Tübingen}{Prof. Dr. Niels Birbaumer}{Programmed in Matlab a time{-}frequency and evoked potential analysis on three years’ worth of MEG data assessing longitudinal changes in stroke patients receiving physiotherapy.}
-\NewEntry{Oct 2012 {-}\\  Nov 2012}{Universität Tübingen}{Prof. Dr. Cornelius Schwarz}{Trained rats to perform whisking in response to barrel cortex stimulation viachronically{-}implanted electrodes, mapping stimulation sensitivity to each cortical layer.}
-\SubHeading{Industry Experience}
-\NewEntry{}{Technical Consultant}{UKT Psychosomatic Med. and Sports Med.}{I evaluated and designed a solution for performing medical science studies in a placebo study, and taught the PhD student who carried out the study over several remote sessions and a few travel consultations.}
-\NewEntry{}{Research Internship}{The Neuromarketing Labs}{I completed set{-}up of an EEG laboratory, including software calibration and noise measurements. Designed and ran two experiments estimating the evoked responses of semantic agreement and price agreement, then analyzed the data. The results from the second experiment are the basis of Dr. Müller’s recently{-}published book, "Neuropricing". Currently volunteering as an EEG consultant by giving one{-}day workshops on Fieldtrip, SPM, and artifact correction methods.}
-\SubHeading{Journal Publications}
-\Description{Broetz D., Del Grosso, N.A., Rea M., Ramos{-}Murguialday, A., Soekadar S.R., Birbaumer, N. ``A New Hand Assessment Instrument for Severely Affected Stroke Patients.''  Journal of Neurorehabilitation. 2014; 34(3), 409{-}27.}
-\Description{Benoit, J.B., Del Grosso, N.A., Yoder, J.A., Denlinger, D.L. ``Resistance to Dehydration between Bouts of Blood Feeding in the Bed Bug, Cimex Lectularius, is Enhanced by Water Conservation, Aggregation, and Quiescence.'' American Journal of Tropical Medical Hygience. May 2007; 76(5), 987{-}93.}
-\SubHeading{Skills}
-\begin{itemize}
-\item
-\textbf{Languages}: English (Mother Tongue), German (Level B1), French (Level A1-2)
-\end{itemize}
-\begin{itemize}
-\item
-\textbf{Programming}: Python, Matlab, C-Sharp, GLSL, R, LabView, C, Bash/Linux, LaTeX
-\end{itemize}
-\begin{itemize}
-\item
-\textbf{Stimulus Presentation}: Psychopy, Neurobs Presentation, Psychophysics Toolbox, OpenGL, Pyglet, SuperLab, RatCAVE
-\end{itemize}
-\begin{itemize}
-\item
-\textbf{Statistical Analysis}: Pyton SciPy Stack (Pandas, Numpy, Matplotlib), Statistical Parametric Mapping (SPM), SPSS, R, Matlab Statistics Toolbox, Fieldtrip, gTec Analyze, BrainVision Analyzer
-\end{itemize}
-\begin{itemize}
-\item
-\textbf{Graphics}: Blender, Adobe Suite (Photoshop, Illustrator, and InDesign), OpenGL, Google SketchUp, GIMP, Inkspace
-\end{itemize}
-\begin{itemize}
-\item
-\textbf{Wet Lab Skills}: Rat Neurosurgery, Animal Behavioral training (rats and monkeys), in vivo electrophysiology (single needle electrodes, chronically-implanted electrode arrays, noninvasive arrays of EEG electrodes and MEG sensors), Basic Electronics, Comfortable with building custom laboratory equipment
-\end{itemize}
-\begin{itemize}
-\item
-\textbf{EEG System Experience}: BrainProducts, gTec, Grass Instruments, CTF
-\end{itemize}
-\SubHeading{Awards}
-\DescMarg{2015}{Best Poster Award at Interact Munich Conference}
-\DescMarg{2011}{National Science Foundation Graduate Research Fellowship}
-\DescMarg{2008}{NSF Neuroscience REU Fellowship at Duke University}
-Full List of Positions and Publications Available Upon Request.
-\includegraphics[width=5cm]{images/Signaturetransparant.png}
-\end{cv}
-=======
 \documentclass{article}%
 \usepackage[T1]{fontenc}%
 \usepackage[utf8]{inputenc}%
@@ -122,7 +13,7 @@ Full List of Positions and Publications Available Upon Request.
 \hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon}%
 \newlength{\datebox}%
 \settowidth{\datebox}{Tuebingen, Germany}%
-\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}}%
+\renewcommand{\cvheadingfont}{\LARGE}%
 \newcommand{\SubHeading}[1]{\vspace{1em}\noindent\spacedlowsmallcaps{#1}\vspace{0.7em}\\}%
 \newcommand{\Email}[1]{\href{mailto:#1}{#1}}%
 \newcommand{\MarginText}[1]{\marginpar{\raggedleft\small#1}}%
@@ -143,15 +34,15 @@ Full List of Positions and Publications Available Upon Request.
 \SubHeading{Personal Info}%
 \HeaderOnly{Address}{Karl{-}Witthalm{-}Str. 3, 81375 München}%
 \HeaderOnly{Telephone}{+49 170 8253289}%
-\HeaderOnly{E{-}mail}{\Email{delgrosso.nick@gmail.com}}%
+\HeaderOnly{E{-}mail}{\Email{delgrosso@bio.lmu.de}}%
 \SubHeading{Goals}%
 \begin{itemize}%
 \item%
-Build technical skills in a wide variety of fields in order to perform high{-}quality research at institutes with limited resources.%
+Inspire others through mentoring, teaching and leadership.%
 \end{itemize}%
 \begin{itemize}%
 \item%
-Obtain a PhD in cognitive neuroscience by studying multimodal sensory integration and sensorimotor interactions.%
+Build technical skills in a wide variety of fields in order to perform high{-}quality research at institutes with limited resources.%
 \end{itemize}%
 \begin{itemize}%
 \item%
@@ -159,22 +50,27 @@ Support open science by building tools and teaching research methodology that pr
 \end{itemize}%
 \begin{itemize}%
 \item%
-Obtain teaching, project management, and laboratory experience sufficient to one day become a competent university professor.%
+Obtain teaching, project management, and laboratory experience sufficient to one day become an excellent university professor.%
 \end{itemize}%
 \SubHeading{Education}%
-\NewEntry{Aug 2012}{M.Sc. Neuroscience}{Max Planck International Research School, Graduate School of Neural and Behavioural Sciences}{}%
+\NewEntry{Oct 2014 {-} Present}{PhD. Candidate}{Graduate School of Systemic Neurosciences, Lüdwig{-}Maximillians Üniversität}{}%
+\NewEntry{Aug 2012}{M.Sc. Neuroscience}{Graduate Training Centre of Neuroscience, Eberhard Karls Universität Tübingen}{}%
 \NewEntry{May 2010}{B.Sc. Psychology}{Wittenberg University}{}%
 \SubHeading{Teaching Experience}%
+\NewEntry{July 2018}{Programming Instructor}{Teaching Statistics with R}{This 4{-}day workshop is an intensive R course taught to the Psychology department professors at Kwantlen University in Vancouver, Canada.  In this course, they learned the R programming language and how to build statistics teaching materials with it.}%
+\NewEntry{April 2018}{Organizer}{Munich Science Slam}{Arranged a science slam event at a local industry event space, working with 14 speakers from 5 institutes to give talks in a competion.  Integrated a real{-}time evaluation system into the event for the 60 audience members to use for feedback.  This event was successful and was repeated in October 2018}%
+\NewEntry{April 2018 {-} Present}{Soft Skills Trainer}{Presentation Skills for Scientists}{With this 1{-}2 day workshop, I taught effective talk organization and outlining skills for scientific presentations.  Scientists gain confidence by learning how to focus on their goals and delivering speeches convincingly through repeated practice.}%
 \NewEntry{October 2017}{3D Graphics Instructor}{Animal Tracking and VR Bootcamp}{I co{-}taught an international, week{-}long workshop on combining animal tracking through machine vision methods and 3D graphics applications to build virtual reality systems for freely{-}moving animals.  Besides theoretical lectures on the mathematics and engineering behind virtual reality systems, I wrote tutorials for software I wrote to teach the concepts, from which the participants, consisting of PhD students, Post{-}docs, and Professors, built their own prototype VR systems for ants.}%
-\NewEntry{Fall 2017}{Organizer}{PyData Munich}{I revived a local chapter for the global PyData organization, coordinating with technology companies in Munich (e.g. Google, Nokia, TNG Consulting, JetBrains, and Wayra) to build a data{-}science teaching community through the MeetUp platform. These companies now host biweekly tutorials at their event spaces, sponsoring each event and providing spaces for university researchers and tech industry specialists to meet, interact, and learn together.}%
+\NewEntry{Fall 2017 {-} Present}{Organizer}{PyData Munich}{I revived a local chapter for the global PyData organization, coordinating with technology companies in Munich (e.g. Google, Nokia, TNG Consulting, JetBrains, and Wayra) to build a data{-}science teaching community through the MeetUp platform. These companies now host biweekly tutorials at their event spaces, sponsoring each event and providing spaces for university researchers and tech industry specialists to meet, interact, and learn together.}%
 \NewEntry{Summer 2017}{Organizer}{Super Python Talks for Life Science}{I organized a biweekly seminar series for teaching intermediate{-}level data analysis and Python programming tutorials, given by 10 PhD students and Pos{-}docs, including myself.  Besides recruiting these speakers, I organized the room and equipment for these sessions, advertised the events, and ran the sessions.  This series was successful; it was regularly attended by 30{-}70 researchers.}%
-\NewEntry{July 2016 and July 2017}{Trainer}{Introduction to Scientific Programming in Python}{This 4{-}day workshop is an intensive version of the semester Python course I teach at LMU.  In this period, students with no programming experience gain the skills needed to perform data analysis and in Python and reason about their analysis workflow.}%
-\NewEntry{Summer 2016 and Summer 2017}{Data Science Lecturer}{Introduction to Scientific Programming in Python}{In this semester course, taught two years in a row, I taught beginning programmers data management, scientific data analysis, and programming skills in a new language (Python).  Besides organizing and planning the course, I also prepared all course materials, homework assignments, and graded their final projects.}%
-\NewEntry{Winter 2015}{Lecturer}{Introduction to Matlab}{I planned and taught Matlab to beginning proramming students.}%
-\NewEntry{December 2015}{Teaching Assistant}{Psychophysics}{In this 2{-}week block course, I provided technical and programming assistance to students programming and analysing their own psychopysics experiments in Matlab, R, and Excel.}%
+\NewEntry{July 2016 {-} Present}{Trainer}{Intro. to Scientific Programming in Python}{This 4{-}day workshop is an intensive version of the semester Python course I teach at LMU.  In this period, students with no programming experience gain the skills needed to perform data analysis and in Python and reason about their analysis workflow.}%
+\NewEntry{Summer 2016 {-} Summer 2017}{Lecturer}{Intro. to Scientific Programming in Python}{In this semester course, taught two years in a row, I taught beginning programmers data management, scientific data analysis, and programming skills in a new language (Python).  Besides organizing and planning the course, I also prepared all course materials, homework assignments, and graded their final projects.}%
+\NewEntry{Winter 2013 {-} Summer 2014}{Lecturer}{Introduction to Matlab}{For 3 Semesters, I taught a 2{-}week introduction to programming course to beginning programmers.  Besides organizing, planning, and teaching the course, I also prepared all course materials and homework assignments.}%
+\NewEntry{December 2015}{Teaching Assistant}{Psychophysics}{In this 2{-}week block course, I acted as tutor, providing technical and programming assistance to students programming and analysing their own psychopysics experiments in Matlab, R, and Excel.}%
+\NewEntry{2015 {-} 2017}{Proofreader}{Freelance Proofreader}{Proofread and Edited research papers for graduate students in medicine, neuroscience, and philosophy to programming}%
 \SubHeading{Research Experience}%
 \NewEntry{May 2013 {-}\newline%
-  Present}{Ludwig{-}Maximillians Universität}{Prof. Dr. Anton Sirota}{Programmed a 3D graphics engine in Python to build virtual reality system for freely moving rats, designed and carried out cognitive science experiments testing the generalizability of virtual reality research to its real{-}world counterparts, supervised six students in programming, engineering, and cognitive science projects, organized weekly journal clubs, planned departmental social events and retreats, and ordered new laboratory equipment.}%
+  Present}{Ludwig{-}Maximillians Universität}{Prof. Dr. Anton Sirota}{Programmed a 3D graphics engine in Python to build virtual reality system for freely moving rats, supervised students in programming, engineering, and cognitive science projects, organized weekly journal clubs, and ordered new equipment, trained rodents to perform behavioral tasks, and performed surgery on said rodents as part of brain research.}%
 \SubHeading{Industry Experience}%
 \NewEntry{}{Freelance Scientific Consultant}{UKT Psychosomatic Med. and Sports Med.}{I evaluated and designed a solution for performing medical science studies in a placebo study, and taught the PhD student who carried out the study over several remote sessions and a few travel consultations.}%
 \NewEntry{}{Research Internship}{The Neuromarketing Labs}{I completed set{-}up of an EEG laboratory, including software calibration and noise measurements. Designed and ran two experiments estimating the evoked responses of semantic agreement and price agreement, then analyzed the data. The results from the second experiment are the basis of Dr. Müller’s recently{-}published book, "Neuropricing". Currently volunteering as an EEG consultant by giving one{-}day workshops on Fieldtrip, SPM, and artifact correction methods.}%
@@ -197,7 +93,7 @@ Obtain teaching, project management, and laboratory experience sufficient to one
 \end{itemize}%
 \begin{itemize}%
 \item%
-\textbf{Statistical Analysis}: Statistical Parametric Mapping (SPM), SPSS, R, Matlab Statistics Toolbox, Fieldtrip, gTec Analyze, BrainVision Analyzer%
+\textbf{Statistical Analysis}: Pyton SciPy Stack (Pandas, Numpy, Matplotlib), Statistical Parametric Mapping (SPM), SPSS, R, Matlab Statistics Toolbox, Fieldtrip, gTec Analyze, BrainVision Analyzer%
 \end{itemize}%
 \begin{itemize}%
 \item%
@@ -212,6 +108,7 @@ Obtain teaching, project management, and laboratory experience sufficient to one
 \textbf{EEG System Experience}: BrainProducts, gTec, Grass Instruments, CTF%
 \end{itemize}%
 \SubHeading{Awards}%
+\DescMarg{October 2017}{Hackathon 3rd Place Winner and "Most Creative Team" Award at Burda Bootcamp Event "Health and Fitness Hackathon"}%
 \DescMarg{July 2017}{Hackathon Track Winner at Media Lab Bayern Event "FutureLab{-}{-}Smart Home meets Journalism"}%
 \DescMarg{April 2017}{Hackathon Winner at Burda Bootcamp Event "Love Hackathon"}%
 \DescMarg{2016}{Best Talk Award at Interact Munich Conference}%
@@ -221,5 +118,4 @@ Obtain teaching, project management, and laboratory experience sufficient to one
 Full List of Positions and Publications Available Upon Request.%
 \includegraphics[width=5cm]{images/Signaturetransparant.png}%
 \end{cv}%
->>>>>>> ce8e35a0f1df981c2ef00c89d259b3a71108a7aa
 \end{document}
