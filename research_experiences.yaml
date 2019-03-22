@@ -1,9 +1,10 @@
 ---
 Personal Info:
-  - Address: Karl-Witthalm-Str. 3, 81375 München
+  - Address: Karl-Witthalm-Str. 3, 81375 Muenchen
   - Telephone: +49 170 8253289
   # - E-mail: delgrosso.nick@gmail.com
-  - E-mail: delgrosso@bio.lmu.de
+  #  - E-mail: delgrosso@bio.lmu.de
+  - E-mail: delgrosso@biochem.mpg.de
 
 Goals:
   - Inspire others through mentoring, teaching and leadership.
@@ -13,18 +14,18 @@ Goals:
 
 Education:
   - Degree: PhD. Candidate
-    Date: Oct 2014 - Present
+    Date: Oct 2014 - Dec 2018
     StartDate: Oct 2014
-    EndDate: Present
-    Completed: False
-    Institute: Graduate School of Systemic Neurosciences, Lüdwig-Maximillians Üniversität
+    EndDate: Dec 2018
+    Completed: True
+    Institute: Graduate School of Systemic Neurosciences, Luedwig-Maximillians Universitaet
     Location: Munich, Germany
   - Degree: M.Sc. Neuroscience
     Date: Aug 2012
     StartDate: September 2010
     EndDate: Aug 2012
-    Institute: Graduate Training Centre of Neuroscience, Eberhard Karls Universität Tübingen
-    Location: Tübingen, Germany
+    Institute: Graduate Training Centre of Neuroscience, Eberhard Karls Universitaet Tübingen
+    Location: Tuebingen, Germany
     Completed: True
   - Degree: B.Sc. Psychology
     Date: May 2010
@@ -35,10 +36,20 @@ Education:
     Completed: True
 
 Research Experience:
-  - Institute: Ludwig-Maximillians Universität
+  - Institute: Max Planck Institute of Biochemistry
+    Supervisor: Prof. Dr. Matthias Mann
+    StartDate: Nov 2018
+    EndDate: Present
+    Description:  A Postdoctoral research position desigining scientific software for open science practices in a proteomics department.
+    Responsitibilities:
+      - Training reserachers to program in Python.
+      - Desigining High-Throughput data collection and data analysis pipelines.
+      - Supporting usage and creation of open-source scientific software.
+      - Evangalizing DevOps and Lean management practices in research.
+  - Institute: Ludwig-Maximillians Universitaet
     Supervisor: Prof. Dr. Anton Sirota
     StartDate: May 2013
-    EndDate: Present
+    EndDate: Nov 2018
     Description: Programmed a 3D graphics engine in Python to build virtual reality system for freely moving rats, supervised students in programming, engineering, and cognitive science projects, organized weekly journal clubs, and ordered new equipment, trained rodents to perform behavioral tasks, and performed surgery on said rodents as part of brain research.
     Responsibilities:
       - Programmed a 3D graphics engine in Python
@@ -53,7 +64,7 @@ Research Experience:
     Reference:
       Name: Prof. Dr. Anton Sirota
       Email: anton.sirota@cin.uni-tuebiungen.de
-  - Institute: &instTu Universität Tübingen
+  - Institute: &instTu Universitaet Tübingen
     Supervisor: &supChrist Prof. Dr. Christoph Braun
     StartDate: Aug 2012
     EndDate: May 2013
