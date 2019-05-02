@@ -2,15 +2,15 @@
 Personal Info:
   - Address: Karl-Witthalm-Str. 3, 81375 Muenchen
   - Telephone: +49 170 8253289
-  # - E-mail: delgrosso.nick@gmail.com
+  - E-mail: delgrosso.nick@gmail.com
   #  - E-mail: delgrosso@bio.lmu.de
-  - E-mail: delgrosso@biochem.mpg.de
+  #  - E-mail: delgrosso@biochem.mpg.de
 
 Goals:
-  - Inspire others through mentoring, teaching and leadership.
-  - Build technical skills in a wide variety of fields in order to perform high-quality research at institutes with limited resources.
   - Support open science by building tools and teaching research methodology that promotes reproducible research.
+  - Build technical skills in a wide variety of fields in order to perform high-quality research at institutes with limited resources.
   - Obtain teaching, project management, and laboratory experience sufficient to one day become an excellent university professor.
+  
 
 Education:
   - Degree: PhD. Candidate
@@ -39,13 +39,14 @@ Research Experience:
   - Institute: Max Planck Institute of Biochemistry
     Supervisor: Prof. Dr. Matthias Mann
     StartDate: Nov 2018
-    EndDate: Present
-    Description:  A Postdoctoral research position desigining scientific software for open science practices in a proteomics department.
-    Responsitibilities:
-      - Training reserachers to program in Python.
-      - Desigining High-Throughput data collection and data analysis pipelines.
-      - Supporting usage and creation of open-source scientific software.
-      - Evangalizing DevOps and Lean management practices in research.
+    EndDate: July 2019
+    Description:  Programmed high-throughput automated data collection and data analysis pipelines. I also designed and implemented a job-scheduling web application, implementing lean management methods to decrease data collection waiting times for 40 users and trained and mentored several biology and bioinformatics researchers in Python programming methods and open-source collaboration workflows, as well as gave introductory programming workshops for over 150 researchers.
+    Responsibilities:
+      - Designed High-Throughput data collection and data analysis pipelines.
+      - Designed and implemented a job-scheduling web application, implementing lean management methods to decrease data collection waiting times for 40 users. 
+      - Trained and mentored biology and bioinformatics researchers in Python programming methods.
+      - Supported usage and creation of open-source scientific software.
+      - Evangalized DevOps and Lean management practices in research.
   - Institute: Ludwig-Maximillians Universitaet
     Supervisor: Prof. Dr. Anton Sirota
     StartDate: May 2013
@@ -64,7 +65,7 @@ Research Experience:
     Reference:
       Name: Prof. Dr. Anton Sirota
       Email: anton.sirota@cin.uni-tuebiungen.de
-  - Institute: &instTu Universitaet Tübingen
+  - Institute: &instTu Universitaet Tuebingen
     Supervisor: &supChrist Prof. Dr. Christoph Braun
     StartDate: Aug 2012
     EndDate: May 2013
@@ -196,6 +197,9 @@ Journal Publications:
   - Broetz D., Del Grosso, N.A., Rea M., Ramos-Murguialday, A., Soekadar S.R., Birbaumer, N. ``A New Hand Assessment Instrument for Severely Affected Stroke Patients.''  Journal of Neurorehabilitation. 2014; 34(3), 409-27.
   - Benoit, J.B., Del Grosso, N.A., Yoder, J.A., Denlinger, D.L. ``Resistance to Dehydration between Bouts of Blood Feeding in the Bed Bug, Cimex Lectularius, is Enhanced by Water Conservation, Aggregation, and Quiescence.'' American Journal of Tropical Medical Hygience. May 2007; 76(5), 987-93.
 
+Press Releases:
+  - Yeager, A. "Virtual Reality May Revolutionize Brain Science." The Scientist, February 2018, 
+
 Conference Publications:
   - Conference: Harvard-LMU Young Scientists Forum
     Date: September 2018
@@ -251,24 +255,26 @@ Skills:
     - French (Level A1-2)
   - Programming:
     - Python
-    - Matlab
-    - C-Sharp
-    - GLSL
     - R
+    - Matlab
+    - GLSL
+    - Docker
     - LabView
     - C
     - Bash/Linux
     - LaTeX
+    - Arduino
   - Stimulus Presentation:
     - Psychopy
     - Neurobs Presentation
     - Psychophysics Toolbox
     - OpenGL
     - Pyglet
+    - Vispy
     - SuperLab
     - RatCAVE
   - Statistical Analysis:
-    - Pyton SciPy Stack (Pandas, Numpy, Matplotlib)
+    - Python SciPy Stack (Pandas, Numpy, Matplotlib, etc)
     - Statistical Parametric Mapping (SPM)
     - SPSS
     - R
@@ -276,13 +282,17 @@ Skills:
     - Fieldtrip
     - gTec Analyze
     - BrainVision Analyzer
+  - Data Workflow Management:
+    - Snakemake
+    - PyDoit
+    - Docker
+    - Singularity
   - Graphics:
-    - Blender
+    - Blender3D
     - Adobe Suite (Photoshop, Illustrator, and InDesign)
     - OpenGL
     - Google SketchUp
-    - GIMP
-    - Inkspace
+    - Open Source Suite (GIMP, Inkspace, and Scribus)
   - Wet Lab Skills:
     - Rat Neurosurgery
     - Animal Behavioral training (rats and monkeys)

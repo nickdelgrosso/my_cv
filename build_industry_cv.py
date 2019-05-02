@@ -7,7 +7,7 @@ from datetime import datetime
 
 # Get data for cv.
 with  open('research_experiences.yaml') as f:
-    data= yaml.load(f)
+    data= yaml.load(f, Loader=yaml.FullLoader)
 
 # Create Latex file, and the CV object to build sections out of.
 doc = get_cv_doc('docs/delgrosso_industry_cv')
