@@ -166,7 +166,7 @@ Teaching Experience:
   - Position: Trainer
     Course Name: Intro. to Scientific Programming in Python
     Date: July 2016 - Present
-    Description: This 4-day workshop is an intensive version of the semester Python course I teach at LMU.  In this period, students with no programming experience gain the skills needed to perform data analysis and in Python and reason about their analysis workflow.
+    Description: This 4-day workshop is an intensive version of the semester Python course I teach at LMU every few months.  In this period, students with no programming experience gain the skills needed to perform data analysis and in Python and reason about their analysis workflow.
   - Position: Organizer
     Course Name: Super Python Talks for Life Science
     Date: Summer 2017
@@ -191,6 +191,19 @@ Teaching Experience:
     Course Name: Teaching Statistics with R
     Date: July 2018
     Description: This 4-day workshop is an intensive R course taught to the Psychology department professors at Kwantlen University in Vancouver, Canada.  In this course, they learned the R programming language and how to build statistics teaching materials with it.
+  - Position: Trainer
+    Course Name: Intermediate Scientific Programming in Python
+    Date: August 2018
+    Description: A 4-day workshop on good programming practices essential for writing robust, reusable Python code for scientific data analysis.  Covered object-oriented programming, advanced iteration and automation structures in Python, performance profiling, testing, and packaging code.  Throughout each unit, I emphasized idiomatic code style, good coding practices, and problem-solving strategies.
+  - Position: Trainer
+    Course Name: Computer Graphics for Virtual Reality
+    Date: March 2019
+    Description: Taught Object-Oriented Programming methdology in the context of designing a 3D Graphics library, including 3D matrix multiplication, shader graphics, and event loop programming.
+  - Position: Trainer
+    Course Name: The Python Tsunami
+    Date: April 2019
+    Description: In this compressed version of the "Intro. to Python" course, I led 100 biology students and 6 instructors in a conference-style 2-day course that culminated in a data jam showcasing their new programming and data analysis skills.
+
 
 Journal Publications:
   - Nicholas A. Del Grosso, Justin J. Graboski, Weiwei Chen, Eduardo Blanco Hernández, Anton Sirota. ``Virtual Reality system for freely-moving rodents.'' bioRxiv 161232. July 2017; doi: https://doi.org/10.1101/161232
