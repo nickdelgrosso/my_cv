@@ -15,6 +15,8 @@ def get_cv_doc(filename):
 
     # Set Packages
     doc.packages.append(Package("inputenc", options="utf8"))
+    doc.packages.append(Package("fontenc", options="T1"))
+    # doc.packages.append(Package("lmodern"))
     doc.packages.append(Package('marginnote'))
     doc.packages.append(UnsafeCommand('reversemarginpar'))
     doc.packages.append(Package('graphicx'))

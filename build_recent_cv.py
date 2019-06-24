@@ -52,7 +52,7 @@ with doc.create(CV(data, arguments='Nicholas A. Del Grosso')) as cv:
 
     # Add a signature at the bottom
     cv.append('Full List of Positions and Publications Available Upon Request.')
-    cv.append(includegraphics(options='width=5cm', arguments='images/Signaturetransparant.png'))
+    # cv.append(includegraphics(options='width=5cm', arguments='images/Signaturetransparant.png'))
 
 
 doc.generate_pdf()

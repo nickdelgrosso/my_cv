@@ -25,12 +25,14 @@ with doc.create(CV(data, arguments='Nicholas A. Del Grosso')) as cv:
     cv.build_section('Education', lambda x: NewEntry([x['Date'], x['Degree'], x['Institute'], '']))
 
     cv.build_section('Research Experience', lambda x: NewEntry([' -\n  '.join([x['StartDate'], x['EndDate']]),
-                                                                       x['Institute'], x['Supervisor'], x['Description']]))
+                                                                       x['Institute'], x['Supervisor'], x['Description']]),
+                     limit=5)
 
     cv.build_section('Industry Experience', lambda x: NewEntry([' -\n '.join(x['StartDate', x['EndDate']]),
                                                                        x['Position'], x['Institute'], x['Description']]))
 
-    cv.build_section('Teaching Experience', lambda x: NewEntry([x['Date'], x['Position'], x['Course Name'], x['Description']]), reverse=True)
+    cv.build_section('Teaching Experience', lambda x: NewEntry([x['Date'], x['Position'], x['Course Name'], x['Description']]), reverse=True,
+                     limit=5)
 
     cv.build_section('Journal Publications', lambda x: Description(x))
 
@@ -44,7 +46,7 @@ with doc.create(CV(data, arguments='Nicholas A. Del Grosso')) as cv:
     cv.build_section('Awards', lambda x: DescMarg([x['Date'], x['Title']]))
 
     # Add a signature at the bottom
-    cv.append(includegraphics(options='width=5cm', arguments='images/Signaturetransparant.png'))
+    # cv.append(includegraphics(options='width=5cm', arguments='images/Signaturetransparant.png'))
 
 
 doc.generate_pdf()

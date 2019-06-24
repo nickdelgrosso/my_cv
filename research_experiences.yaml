@@ -18,14 +18,14 @@ Education:
     StartDate: Oct 2014
     EndDate: Dec 2018
     Completed: True
-    Institute: Graduate School of Systemic Neurosciences, Lüdwig-Maximillians Universität
+    Institute: Graduate School of Systemic Neurosciences, Luedwig-Maximillians Universitaet
     Location: Munich, Germany
   - Degree: M.Sc. Neuroscience
     Date: Aug 2012
     StartDate: September 2010
     EndDate: Aug 2012
-    Institute: Graduate Training Centre of Neuroscience, Eberhard Karls Universität Tübingen
-    Location: Tübingen, Germany
+    Institute: Graduate Training Centre of Neuroscience, Eberhard Karls Universitaet Tuebingen
+    Location: Tuebingen, Germany
     Completed: True
   - Degree: B.Sc. Psychology
     Date: May 2010
@@ -47,7 +47,7 @@ Research Experience:
       - Trained and mentored biology and bioinformatics researchers in Python programming methods.
       - Supported usage and creation of open-source scientific software.
       - Evangalized DevOps and Lean management practices in research.
-  - Institute: Ludwig-Maximillians Universität
+  - Institute: Ludwig-Maximillians Universitaet
     Supervisor: Prof. Dr. Anton Sirota
     StartDate: May 2013
     EndDate: Nov 2018
@@ -65,7 +65,7 @@ Research Experience:
     Reference:
       Name: Prof. Dr. Anton Sirota
       Email: anton.sirota@cin.uni-tuebiungen.de
-  - Institute: &instTu Universität Tübingen
+  - Institute: &instTu Universitaet Tuebingen
     Supervisor: &supChrist Prof. Dr. Christoph Braun
     StartDate: Aug 2012
     EndDate: May 2013
@@ -140,9 +140,9 @@ Industry Experience:
     Institute: The Neuromarketing Labs
     StartDate: Nov 2012
     EndDate: Dec 2012
-    Description: I completed set-up of an EEG laboratory, including software calibration and noise measurements. Designed and ran two experiments estimating the evoked responses of semantic agreement and price agreement, then analyzed the data. The results from the second experiment are the basis of Dr. Müller’s recently-published book, "Neuropricing". Currently volunteering as an EEG consultant by giving one-day workshops on Fieldtrip, SPM, and artifact correction methods.
+    Description: I completed set-up of an EEG laboratory, including software calibration and noise measurements. Designed and ran two experiments estimating the evoked responses of semantic agreement and price agreement, then analyzed the data. The results from the second experiment are the basis of Dr. Mueller’s recently-published book, "Neuropricing". Currently volunteering as an EEG consultant by giving one-day workshops on Fieldtrip, SPM, and artifact correction methods.
     Reference:
-      Name: Dr. Kai-Markus Müller
+      Name: Dr. Kai-Markus Mueller
       Email: km.mueller@neuromarketing-labs.com
 
 Teaching Experience:
@@ -185,14 +185,14 @@ Teaching Experience:
     Description: With this 1-2 day workshop, I taught effective talk organization and outlining skills for scientific presentations.  Scientists gain confidence by learning how to focus on their goals and delivering speeches convincingly through repeated practice.
   - Position: Organizer
     Course Name: Munich Science Slam
-    Date: April 2018
-    Description: Arranged a science slam event at a local industry event space, working with 14 speakers from 5 institutes to give talks in a competion.  Integrated a real-time evaluation system into the event for the 60 audience members to use for feedback.  This event was successful and was repeated in October 2018
+    Date: April 2018 - Present
+    Description: Co-founded a tri-monthly science slam event series, working with 10-14 speakers from various institutes to give talks in a competion format.  At the end of each event, I demonstrate a real-time evaluation system into the event for the 60 audience members to use for feedback.
   - Position: Programming Instructor
     Course Name: Teaching Statistics with R
     Date: July 2018
     Description: This 4-day workshop is an intensive R course taught to the Psychology department professors at Kwantlen University in Vancouver, Canada.  In this course, they learned the R programming language and how to build statistics teaching materials with it.
   - Position: Trainer
-    Course Name: Intermediate Scientific Programming in Python
+    Course Name: Int. Scientific Programming in Python
     Date: August 2018
     Description: A 4-day workshop on good programming practices essential for writing robust, reusable Python code for scientific data analysis.  Covered object-oriented programming, advanced iteration and automation structures in Python, performance profiling, testing, and packaging code.  Throughout each unit, I emphasized idiomatic code style, good coding practices, and problem-solving strategies.
   - Position: Trainer
@@ -206,6 +206,7 @@ Teaching Experience:
 
 
 Journal Publications:
+  - Nicholas A. Del Grosso, Anton Sirota.  ``Ratcave, A 3D graphics python package for cognitive psychology experiments'' May 2019. Behavioral Research Methods. https://doi.org/10.3758/s13428-019-01245-x
   - Nicholas A. Del Grosso, Justin J. Graboski, Weiwei Chen, Eduardo Blanco Hernández, Anton Sirota. ``Virtual Reality system for freely-moving rodents.'' bioRxiv 161232. July 2017; doi: https://doi.org/10.1101/161232
   - Broetz D., Del Grosso, N.A., Rea M., Ramos-Murguialday, A., Soekadar S.R., Birbaumer, N. ``A New Hand Assessment Instrument for Severely Affected Stroke Patients.''  Journal of Neurorehabilitation. 2014; 34(3), 409-27.
   - Benoit, J.B., Del Grosso, N.A., Yoder, J.A., Denlinger, D.L. ``Resistance to Dehydration between Bouts of Blood Feeding in the Bed Bug, Cimex Lectularius, is Enhanced by Water Conservation, Aggregation, and Quiescence.'' American Journal of Tropical Medical Hygience. May 2007; 76(5), 987-93.
@@ -238,7 +239,7 @@ Conference Publications:
   - Conference: Society for Neuroscience
     Date: Nov 2014
     Title: ratCAVE, A Novel Virtual Reality System for Freely-Moving Rodents.
-  - Conference: &nena NENA Tübingen
+  - Conference: &nena NENA Tuebingen
     Date: Nov. 2012
     Title: Interpreting (M)EEG, A First Look at Dynamic Causal Modeling.
     Description: Introduced a probabilistic nonlinear modeling framework for interpretation of MEG and EEG data, along with the results of a pilot study in which we applied the approach.
