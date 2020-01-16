@@ -37,6 +37,9 @@ def get_cv_doc(filename):
     doc.packages.append(UnsafeCommand('newcommand', r'\Email', options=1,
                              extra_arguments=r'\href{mailto:#1}{#1}'))
 
+    doc.packages.append(UnsafeCommand('newcommand', r'\GitHub', options=1,
+                             extra_arguments=r'\href{https://www.github.com/#1}{#1}'))
+
     # Unchanged
     doc.packages.append(UnsafeCommand('newcommand', r'\MarginText', options=1, extra_arguments=r'\marginpar{\raggedleft\small#1}'))
 
@@ -68,7 +71,7 @@ def get_cv_doc(filename):
 
 # Make New Commands via a metaclass
 for name in ['MarginText', 'NewEntry', 'Description', 'DescMarg', 'SubHeading', 'EntryHeader', 'HeaderOnly',
-             'vspace', 'hspace', 'includegraphics', 'Email']:
+             'vspace', 'hspace', 'includegraphics', 'Email', 'GitHub']:
     globals()[name] = type(name, (CommandBase,), {'_latex_name': name})
 
 # Custom CV Environment behavior

@@ -17,6 +17,8 @@ with doc.create(CV(data, arguments='Nicholas A. Del Grosso')) as cv:
         for key, value in entry.items():
             if 'mail' in key:
                 value = Email(value)
+            if 'GitHub' in key:
+                value = GitHub(value)
             return HeaderOnly([key, value])
     cv.build_section('Personal Info', format_personal)
 
