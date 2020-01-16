@@ -9,8 +9,9 @@ Personal Info:
 Goals:
   - Support open science by building tools and teaching research methodology that promotes reproducible research.
   - Build technical skills in a wide variety of fields in order to perform high-quality research at institutes with limited resources.
+  - Build explanatory models for sensorimotor learning that further our understanding of motor planning and cognition in biological systems.
   - Obtain teaching, project management, and laboratory experience sufficient to one day become an excellent university professor.
-  
+
 
 Education:
   - Degree: PhD. Candidate
@@ -36,6 +37,14 @@ Education:
     Completed: True
 
 Research Experience:
+  - Institute: Ludwig-Maximillians Universitaet
+    Supervisor: Dr. Thomas Wachtler
+    StartDate: Dec 2019
+    EndDate: March 2020
+    Description: Designed a short course on "Research Data Management" as part of the NFDI initiative on computational infrastructure training for neuroscience.
+    Responsibilities:
+      - Research topics on research data management
+      - Design hands-on exercises on the latest software tools for each topic.
   - Institute: Max Planck Institute of Biochemistry
     Supervisor: Prof. Dr. Matthias Mann
     StartDate: Nov 2018
@@ -43,7 +52,7 @@ Research Experience:
     Description:  Programmed high-throughput automated data collection and data analysis pipelines. I also designed and implemented a job-scheduling web application, implementing lean management methods to decrease data collection waiting times for 40 users and trained and mentored several biology and bioinformatics researchers in Python programming methods and open-source collaboration workflows, as well as gave introductory programming workshops for over 150 researchers.
     Responsibilities:
       - Designed High-Throughput data collection and data analysis pipelines.
-      - Designed and implemented a job-scheduling web application, implementing lean management methods to decrease data collection waiting times for 40 users. 
+      - Designed and implemented a job-scheduling web application, implementing lean management methods to decrease data collection waiting times for 40 users.
       - Trained and mentored biology and bioinformatics researchers in Python programming methods.
       - Supported usage and creation of open-source scientific software.
       - Evangalized DevOps and Lean management practices in research.
@@ -131,10 +140,15 @@ Research Experience:
     Description: Measured dessication rates in the bed bug and isolated fungal growth in three species of cockroach. These studies resulted in a publication in a peer-reviewed journal and a poster presentation at an undergraduate research conference.
 
 Industry Experience:
+  - Position: Freelance Data Analysis Programming Trainer
+    Institute: .
+    StartDate: May 2018
+    EndDate: Present
+    Description: I teach week-long programming workshops for research institutes, universities, and private companies.
   - Position: Freelance Scientific Consultant
     Institute: UKT Psychosomatic Med. and Sports Med.
     StartDate: April 2015
-    EndDate: Present
+    EndDate: April 2016
     Description: I evaluated and designed a solution for performing medical science studies in a placebo study, and taught the PhD student who carried out the study over several remote sessions and a few travel consultations.
   - Position: Research Internship
     Institute: The Neuromarketing Labs
@@ -212,7 +226,7 @@ Journal Publications:
   - Benoit, J.B., Del Grosso, N.A., Yoder, J.A., Denlinger, D.L. ``Resistance to Dehydration between Bouts of Blood Feeding in the Bed Bug, Cimex Lectularius, is Enhanced by Water Conservation, Aggregation, and Quiescence.'' American Journal of Tropical Medical Hygience. May 2007; 76(5), 987-93.
 
 Press Releases:
-  - Yeager, A. "Virtual Reality May Revolutionize Brain Science." The Scientist, February 2018, 
+  - Yeager, A. "Virtual Reality May Revolutionize Brain Science." The Scientist, February 2018,
 
 Conference Publications:
   - Conference: Harvard-LMU Young Scientists Forum
