@@ -311,11 +311,16 @@ Skills:
     - Fieldtrip
     - gTec Analyze
     - BrainVision Analyzer
+    - Scikit-Learn
+    - PyMC3
   - Data Workflow Management:
     - Snakemake
     - PyDoit
     - Docker
     - Singularity
+    - Papermill
+    - Netcdf/XArray
+    - HDF5
   - Graphics:
     - Blender3D
     - Adobe Suite (Photoshop, Illustrator, and InDesign)
